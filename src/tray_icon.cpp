@@ -16,9 +16,9 @@
 
 #include "main.h"
 
-//======================
-// Chargement des images
-//======================
+//==============
+// Image loading
+//==============
 #include "../images/icone.xpm"
 #include "../images/tray2.xpm"
 #include "../images/tray3.xpm"
