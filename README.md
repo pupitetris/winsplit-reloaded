@@ -23,7 +23,12 @@ idiosincracies.
 Please read the LICENSE file for the legal terms under which this
 software is delivered to you.
 
-From the original WinSplit Revolution README (Revolution/Readme.txt):
+Original Changelog: https://pupitetris.github.io/winsplit-reloaded/Revolution/Changelog.html
+
+User Manual: https://pupitetris.github.io/winsplit-reloaded/Revolution/help.html
+
+From the original WinSplit Revolution README:
+https://pupitetris.github.io/winsplit-reloaded/Revolution/README.txt
 
 Overview
 --------
