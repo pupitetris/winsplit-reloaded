@@ -1,0 +1,917 @@
+# Message catalog file template for WinSplit Revolution
+# Copyright (C) 2008 WinSplit Revolution Developpement Team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WinSplit Revolution\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-02-04 21:36+0100\n"
+"PO-Revision-Date: 2009-02-05 16:21+0100\n"
+"Last-Translator: el_libre <el.libre@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\\..\\..\\\n"
+"X-Poedit-Language: Catalan\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: src\n"
+
+#: src/dialog_about.cpp:21
+msgid "About WinSplit Revolution"
+msgstr "Sobre WinSplit Revolution"
+
+#: src/dialog_about.cpp:51
+msgid "Created by Raphael Lencrerot."
+msgstr "Creat per Raphael Lencrerot."
+
+#: src/dialog_about.cpp:52
+msgid "C++ based software developed thanks to the following:"
+msgstr "Programari desenvolupat en C++ mercès a:"
+
+#: src/dialog_about.cpp:53
+msgid "wxWidgets GUI Library and Code::Blocks (C++ IDE)."
+msgstr "wxWidgets GUI Library and Code::Blocks (C++ IDE)."
+
+#: src/dialog_about.cpp:54
+msgid "This software is a Freeware, licensed under Creative Commons License."
+msgstr "Aquest programari és gratuit, freeware sota llicència Creative Commons."
+
+#: src/dialog_about.cpp:55
+msgid "Attribution-Noncommercial-No Derivative Works 3.0 License."
+msgstr "Llicència Attribution-Noncommercial-No Derivative Works 3.0."
+
+#: src/dialog_about.cpp:58
+msgid "WinSplit Revolution Team:"
+msgstr "Equip de Winsplit Revolution:"
+
+#: src/dialog_about.cpp:64
+msgid "Some Rights Reserved"
+msgstr "Alguns drets reservats"
+
+#: src/dialog_about.cpp:74
+#: src/dialog_hotkeys.cpp:183
+#: src/dialog_layout.cpp:97
+#: src/dialog_layout.cpp:294
+#: src/dialog_options.cpp:40
+msgid "&Ok"
+msgstr "&Sí"
+
+#: src/dialog_activewndtools.cpp:15
+msgid "Tools for the active Window"
+msgstr "Eines per a la finestra activa"
+
+#: src/dialog_activewndtools.cpp:81
+msgid "Window style : "
+msgstr "Estil de Finestra:"
+
+#: src/dialog_activewndtools.cpp:84
+msgid "Enable or disable the 'Always on top' style :"
+msgstr "Habilita o deshabilita l'estil 'Sempre sobre tot':"
+
+#: src/dialog_activewndtools.cpp:86
+#: src/dialog_hotkeys.cpp:374
+#: src/dialog_hotkeys.cpp:388
+msgid "Disable"
+msgstr "Desactivar"
+
+#: src/dialog_activewndtools.cpp:86
+#: src/dialog_activewndtools.cpp:170
+#: src/dialog_hotkeys.cpp:353
+#: src/dialog_hotkeys.cpp:386
+msgid "Enable"
+msgstr "Activar"
+
+#: src/dialog_activewndtools.cpp:91
+msgid "Enable transparency for this window"
+msgstr "Habilita transparència per aquesta finestra"
+
+#: src/dialog_activewndtools.cpp:96
+msgid "Change opacity :"
+msgstr "Canvia Opacitat:"
+
+#: src/dialog_activewndtools.cpp:104
+msgid "Screenshot : "
+msgstr "Captura de pantalla :"
+
+#: src/dialog_activewndtools.cpp:109
+#, c-format
+msgid "Image size : %0dx%0d"
+msgstr "Tamany d'imatge : %0dx%0d"
+
+#: src/dialog_activewndtools.cpp:112
+msgid "Save as image file"
+msgstr "Salva com a fitxer d'imatge"
+
+#: src/dialog_activewndtools.cpp:114
+msgid "Copy to clipboard"
+msgstr "Copia a Portapapers"
+
+#: src/dialog_activewndtools.cpp:137
+msgid "Enter the name of the file to save."
+msgstr "Escriu el nom de l'arxiu a salvar."
+
+#: src/dialog_activewndtools.cpp:157
+msgid "The image has been copied into the clipboard."
+msgstr "La imatge ha estat copiada al portapapers."
+
+#: src/dialog_activewndtools.cpp:157
+msgid "Success"
+msgstr "Amb Èxit"
+
+#: src/dialog_activewndtools.cpp:159
+msgid "There was an error while opening the clipboard !"
+msgstr "Hi ha un error mentre s'obre el portapapers"
+
+#: src/dialog_activewndtools.cpp:159
+#: src/dialog_download.cpp:256
+#: src/dialog_layout.cpp:169
+#: src/dialog_options.cpp:687
+#: src/dialog_options.cpp:732
+msgid "Error"
+msgstr "Error"
+
+#: src/dialog_download.cpp:137
+#: src/dialog_hotkeys.cpp:36
+#: src/dialog_hotkeys.cpp:184
+#: src/dialog_layout.cpp:98
+#: src/dialog_layout.cpp:295
+msgid "&Cancel"
+msgstr "&Cancel.la"
+
+#: src/dialog_download.cpp:140
+msgid "&Next"
+msgstr "&Següent"
+
+#: src/dialog_download.cpp:175
+msgid "New version"
+msgstr "Nova versió"
+
+#: src/dialog_download.cpp:181
+msgid "A new version of WinSplit Revolution is available:"
+msgstr "Ja està disponible una nova versió:"
+
+#: src/dialog_download.cpp:182
+msgid "Press next to download the last version."
+msgstr "Prem següent per descarregar la darrera versió."
+
+#: src/dialog_download.cpp:183
+msgid "You can visite the official website http://winsplit-revolution.com to download it."
+msgstr "Tu pots visitar la web oficial http://winsplit-revolution.com per tal de descarregar-lo."
+
+#: src/dialog_download.cpp:216
+msgid "Press finish to process installation"
+msgstr "Prem Finalitza per començar la instal.lació"
+
+#: src/dialog_download.cpp:220
+msgid "&Finish"
+msgstr "&Finalitza"
+
+#: src/dialog_download.cpp:256
+msgid "Problem encountered during download stage"
+msgstr "Ha hagut un problema en la descàrrega"
+
+#: src/dialog_download.cpp:270
+msgid "Are you sure you want to stop downloading the new version?"
+msgstr "Estàs segur/a que vols atura la descàrrega de la nova versió?"
+
+#: src/dialog_download.cpp:270
+#: src/dialog_layout.cpp:175
+#: src/dialog_layout.cpp:185
+#: src/dialog_layout.cpp:513
+msgid "Warning"
+msgstr "Avís"
+
+#: src/dialog_download.cpp:288
+msgid "You should press finish to process installation"
+msgstr "Has de prèmer finalitzar per procedir a la instal.lació"
+
+#: src/dialog_download.cpp:288
+msgid "Cancel anyway?"
+msgstr "Cancel.la de totes formes?"
+
+#: src/dialog_download.cpp:289
+msgid "Message"
+msgstr "Missatge"
+
+#: src/dialog_download.cpp:311
+msgid "Downloading file: "
+msgstr "Descarregant arxiu:"
+
+#: src/dialog_fusion.cpp:13
+#: src/dialog_hotkeys.cpp:298
+#: src/hotkeys_manager.cpp:75
+msgid "Windows fusion"
+msgstr "Windows fusió"
+
+#: src/dialog_fusion.cpp:39
+msgid "Switch windows"
+msgstr "Commutar finestres"
+
+#: src/dialog_fusion.cpp:40
+msgid "Horizontal/Vertical"
+msgstr "Horizontal/Vertical"
+
+#: src/dialog_fusion.cpp:41
+#: src/dialog_hotkeys.cpp:276
+msgid "Center"
+msgstr "Centre"
+
+#: src/dialog_hotkeys.cpp:35
+msgid "&Apply"
+msgstr "&Aplica"
+
+#: src/dialog_hotkeys.cpp:117
+msgid "This hotkey is already used by WinSplit"
+msgstr "Aquesta drecera de teclat està essent utilitzada per Winsplit"
+
+#: src/dialog_hotkeys.cpp:117
+#: src/dialog_hotkeys.cpp:126
+#: src/dialog_hotkeys.cpp:366
+#: src/dialog_options.cpp:510
+#: src/dialog_options.cpp:524
+#: src/dialog_options.cpp:532
+#: src/fonctions_speciales.cpp:108
+msgid "WinSplit message"
+msgstr "Missatge de Winsplit"
+
+#: src/dialog_hotkeys.cpp:126
+#: src/dialog_hotkeys.cpp:366
+msgid "This hotkey is already used by Windows"
+msgstr "Aquesta drecera de teclat està essent usada per Windows"
+
+#: src/dialog_hotkeys.cpp:152
+msgid "Hotkey settings"
+msgstr "Conf. dreceres teclat"
+
+#: src/dialog_hotkeys.cpp:186
+#: src/dialog_layout.cpp:257
+msgid "&Edit"
+msgstr "&Edita"
+
+#: src/dialog_hotkeys.cpp:187
+msgid "&Disable"
+msgstr "&Desactiva"
+
+#: src/dialog_hotkeys.cpp:254
+#: src/dialog_layout.cpp:329
+msgid "Action"
+msgstr "Acció"
+
+#: src/dialog_hotkeys.cpp:255
+msgid "Hotkey"
+msgstr "Drecera de teclat"
+
+#: src/dialog_hotkeys.cpp:257
+#: src/hotkeys_manager.cpp:49
+msgid "Automatic placement"
+msgstr "Posicionamient automàtic"
+
+#: src/dialog_hotkeys.cpp:261
+#: src/dialog_hotkeys.cpp:265
+#: src/dialog_hotkeys.cpp:269
+#: src/dialog_layout.cpp:332
+#: src/dialog_layout.cpp:335
+#: src/dialog_layout.cpp:338
+#: src/hotkeys_manager.cpp:51
+#: src/hotkeys_manager.cpp:54
+#: src/hotkeys_manager.cpp:56
+msgid "Down"
+msgstr "Abaix"
+
+#: src/dialog_hotkeys.cpp:261
+#: src/dialog_hotkeys.cpp:273
+#: src/dialog_hotkeys.cpp:283
+#: src/dialog_layout.cpp:332
+#: src/dialog_layout.cpp:341
+#: src/dialog_layout.cpp:348
+#: src/hotkeys_manager.cpp:52
+#: src/hotkeys_manager.cpp:59
+#: src/hotkeys_manager.cpp:66
+msgid "Left"
+msgstr "Esquerra"
+
+#: src/dialog_hotkeys.cpp:269
+#: src/dialog_hotkeys.cpp:279
+#: src/dialog_hotkeys.cpp:291
+#: src/dialog_layout.cpp:338
+#: src/dialog_layout.cpp:345
+#: src/dialog_layout.cpp:354
+#: src/hotkeys_manager.cpp:57
+#: src/hotkeys_manager.cpp:63
+#: src/hotkeys_manager.cpp:71
+msgid "Right"
+msgstr "Dreta"
+
+#: src/dialog_hotkeys.cpp:283
+#: src/dialog_hotkeys.cpp:287
+#: src/dialog_hotkeys.cpp:291
+#: src/dialog_layout.cpp:348
+#: src/dialog_layout.cpp:351
+#: src/dialog_layout.cpp:354
+#: src/hotkeys_manager.cpp:65
+#: src/hotkeys_manager.cpp:68
+#: src/hotkeys_manager.cpp:70
+msgid "Up"
+msgstr "Adalt"
+
+#: src/dialog_hotkeys.cpp:295
+#: src/hotkeys_manager.cpp:73
+msgid "Mosaic"
+msgstr "Mosaïc"
+
+#: src/dialog_hotkeys.cpp:301
+#: src/hotkeys_manager.cpp:77
+msgid "Close all window"
+msgstr "Tanca totes les finestres"
+
+#: src/dialog_hotkeys.cpp:304
+#: src/hotkeys_manager.cpp:79
+msgid "Move to Left screen"
+msgstr "Moure a la pantalla de l'esquerra"
+
+#: src/dialog_hotkeys.cpp:307
+#: src/hotkeys_manager.cpp:81
+msgid "Move to Right screen"
+msgstr "Moure a la pantalla de la dreta"
+
+#: src/dialog_hotkeys.cpp:310
+#: src/hotkeys_manager.cpp:83
+msgid "Minimize Window"
+msgstr "Minimitza la finestra"
+
+#: src/dialog_hotkeys.cpp:313
+msgid "Maximize window"
+msgstr "Maximize window"
+
+#: src/dialog_hotkeys.cpp:316
+msgid "Active window tools"
+msgstr "Activa eines de finestra"
+
+#: src/dialog_layout.cpp:76
+msgid "x"
+msgstr "x"
+
+#: src/dialog_layout.cpp:77
+msgid "y"
+msgstr "y"
+
+#: src/dialog_layout.cpp:78
+#: src/dialog_layout.cpp:387
+#: src/dialog_layout.cpp:418
+msgid "width"
+msgstr "ample"
+
+#: src/dialog_layout.cpp:79
+#: src/dialog_layout.cpp:391
+#: src/dialog_layout.cpp:419
+msgid "height"
+msgstr "alçada"
+
+#: src/dialog_layout.cpp:169
+msgid "Invalide entry, value must be between 0. and 100."
+msgstr "Entrada no vàlida, el valor ha d'estar entre 0. i 100."
+
+#: src/dialog_layout.cpp:175
+msgid ""
+"This settings define a window outside the screen!\n"
+" Continue anyway?"
+msgstr ""
+"Aquesta configuració defineix una finestra fora de la pantalla.\n"
+" Vols continuar igualment?"
+
+#: src/dialog_layout.cpp:185
+msgid ""
+"This settings define a very small window screen!\n"
+" Continue anyway?"
+msgstr ""
+"Aquesta configuració defineix una finestra molt petita.\n"
+" Vols continuar igualment?"
+
+#: src/dialog_layout.cpp:256
+msgid "&Add"
+msgstr "&Afegeix"
+
+#: src/dialog_layout.cpp:258
+#: src/dialog_options.cpp:99
+msgid "&Delete"
+msgstr "&Esborra"
+
+#: src/dialog_layout.cpp:275
+msgid "x:"
+msgstr "x:"
+
+#: src/dialog_layout.cpp:276
+msgid "y:"
+msgstr "y:"
+
+#: src/dialog_layout.cpp:277
+msgid "width:"
+msgstr "ample:"
+
+#: src/dialog_layout.cpp:278
+msgid "height:"
+msgstr "alçada:"
+
+#: src/dialog_layout.cpp:303
+msgid "Preview"
+msgstr "Vista Prèvia"
+
+#: src/dialog_layout.cpp:330
+msgid "Sequence in per cent"
+msgstr "Seqüència en percentatge"
+
+#: src/dialog_layout.cpp:343
+msgid "Middle"
+msgstr "Mig"
+
+#: src/dialog_layout.cpp:509
+msgid "One task must have at least one possibility"
+msgstr "Una tasca ha de tenir almenys una possibilitat"
+
+#: src/dialog_layout.cpp:513
+msgid "Are you sure you want delete this entry?"
+msgstr "Estàs segur/a que vols esborrar aquesta entrada?"
+
+#: src/dialog_options.cpp:13
+#: src/dialog_selectsettings.cpp:4
+msgid "Options"
+msgstr "Opcions"
+
+#: src/dialog_options.cpp:42
+#: src/dialog_selectsettings.cpp:52
+msgid "Cancel"
+msgstr "Cancel.lar"
+
+#: src/dialog_options.cpp:44
+msgid "Apply"
+msgstr "Aplicar"
+
+#: src/dialog_options.cpp:82
+msgid "Language"
+msgstr "Idioma"
+
+#: src/dialog_options.cpp:83
+msgid "Choose language"
+msgstr "Escollir idioma:"
+
+#: src/dialog_options.cpp:92
+msgid "Miscellaneous"
+msgstr "Miscel·lània"
+
+#: src/dialog_options.cpp:93
+msgid "Take into account topmost windows"
+msgstr "Entra dintre de la finestra més superior"
+
+#: src/dialog_options.cpp:98
+msgid "Delete saved Auto-placements"
+msgstr "Esborrades entrades guardades"
+
+#: src/dialog_options.cpp:106
+msgid "Screenshots temporary files"
+msgstr "Arxius temporals de captures de pantalla"
+
+#: src/dialog_options.cpp:108
+msgid "Delete automatically"
+msgstr "Esborra automàticament"
+
+#: src/dialog_options.cpp:113
+msgid "When WinSplit starts"
+msgstr "Quan inicia Winsplit"
+
+#: src/dialog_options.cpp:114
+msgid "When WinSplit ends"
+msgstr "Quan acaba Winsplit"
+
+#: src/dialog_options.cpp:118
+msgid "Open folder"
+msgstr "Obre directori"
+
+#: src/dialog_options.cpp:124
+msgid "Settings managements"
+msgstr "Control de configuració"
+
+#: src/dialog_options.cpp:125
+#: src/dialog_options.cpp:672
+msgid "Export settings"
+msgstr "Exporta configuració"
+
+#: src/dialog_options.cpp:127
+#: src/dialog_options.cpp:723
+msgid "Import settings"
+msgstr "Importa configuració"
+
+#: src/dialog_options.cpp:132
+msgid "General"
+msgstr "General"
+
+#: src/dialog_options.cpp:145
+#: src/dialog_options.cpp:410
+msgid "No registered process"
+msgstr "No hi ha cap procés registrat encara"
+
+#: src/dialog_options.cpp:163
+msgid "Virtual numpad options"
+msgstr "Opcions de finestres emergents"
+
+#: src/dialog_options.cpp:164
+msgid "Save Virtual numpad state when exit"
+msgstr "enregistra la posició de la finestra emergent i l'estil a sortir"
+
+#: src/dialog_options.cpp:167
+msgid "Show Virtual numpad at starting"
+msgstr "Mostrar una finestra emergent quan s'arrenca winsplit"
+
+#: src/dialog_options.cpp:170
+msgid "Hide Virtual numpad after a virtual key selection"
+msgstr "Amaga un panell numèric virtual després d'una tria de tecla virtual"
+
+#: src/dialog_options.cpp:175
+msgid "Virtual numpad style"
+msgstr "Estil de teclat numèric virtual"
+
+#: src/dialog_options.cpp:176
+msgid "Adjust Virtual numpad transparency"
+msgstr "Ajustrar transparència de la finestra emergent:"
+
+#: src/dialog_options.cpp:182
+msgid "Virtual numpad"
+msgstr "Teclat numèric virtual"
+
+#: src/dialog_options.cpp:196
+msgid "Checking for update"
+msgstr "Comprovant actualització"
+
+#: src/dialog_options.cpp:197
+msgid "Check website for Winsplit updates"
+msgstr "Comprova actualitzacions a la web de Winsplit"
+
+#: src/dialog_options.cpp:201
+msgid "Web updates check frequency :"
+msgstr "Freqüència amb la que comprovar l'actualització de la web"
+
+#: src/dialog_options.cpp:205
+msgid "At start"
+msgstr "a l'Inici"
+
+#: src/dialog_options.cpp:206
+msgid "Weekly"
+msgstr "Setmanalment"
+
+#: src/dialog_options.cpp:207
+msgid "Monthly"
+msgstr "Mensualment"
+
+#: src/dialog_options.cpp:214
+msgid "Manual check :"
+msgstr "Comprovació manual:"
+
+#: src/dialog_options.cpp:215
+msgid "Perform a manual web update check now"
+msgstr "Fes una comprovació de web manual"
+
+#: src/dialog_options.cpp:216
+msgid "Check now"
+msgstr "Comprova ara"
+
+#: src/dialog_options.cpp:222
+msgid "Web update"
+msgstr "Actualització de web"
+
+#: src/dialog_options.cpp:238
+msgid "Drag'N'Go settings :"
+msgstr "Configuració del Drag'N'Go:"
+
+#: src/dialog_options.cpp:240
+msgid "Enable Drag'N'Go"
+msgstr "Habilita Drag'N'Go"
+
+#: src/dialog_options.cpp:244
+msgid "Detection radius :"
+msgstr "Detecció de radi:"
+
+#: src/dialog_options.cpp:260
+msgid "Destination zone style :"
+msgstr "Estil de la zona de destí:"
+
+#: src/dialog_options.cpp:262
+msgid "Click here to select preview zone background color :"
+msgstr "Clica aquí per seleccionar el color de fons de la zona de vista prèvia :"
+
+#: src/dialog_options.cpp:266
+msgid "Click here to select preview zone text color :"
+msgstr "Clica aquí per seleccionar la zona de vista prèvia"
+
+#: src/dialog_options.cpp:272
+msgid "Adjust destination zone transparency"
+msgstr "Ajustar transparència de la zona de destí"
+
+#: src/dialog_options.cpp:278
+msgid "Modifier Activation :"
+msgstr "Activació del modificador:"
+
+#: src/dialog_options.cpp:292
+msgid "Modifier to active Drag'N'Go :"
+msgstr "Modificador a activar Drag'N'Go :"
+
+#: src/dialog_options.cpp:299
+msgid "Drag'N'Go"
+msgstr "Drag'N'Go"
+
+#: src/dialog_options.cpp:314
+msgid "Windows 'Active Window Tracking' built-in functionnality :"
+msgstr "Funcionalitat de 'Rastrejament de Finestra Activa' :"
+
+#: src/dialog_options.cpp:315
+msgid "Any modification here needs at least a session restart to take effect."
+msgstr "Qualsevol modificació aquí necessita com a mínim el reinici de la sessió per a que funcioni."
+
+#: src/dialog_options.cpp:317
+msgid "Enable the Windows 'Active Window Tracking' built-in functionnality."
+msgstr "Habilita la funcionalitat de 'Rastrejament de Finestra Activa' ."
+
+#: src/dialog_options.cpp:322
+msgid "Active Window Tracking will bring the window to the top."
+msgstr "Rastrejament de Finestra Activa portarà la finestra a sobre de tot."
+
+#: src/dialog_options.cpp:328
+msgid "Delay before the action of the 'Active Window Tracking' (milliseconds):"
+msgstr "Retard abans de fer l'acció 'Rastrejament de Finestra Activa'  (en milisegons):'"
+
+#: src/dialog_options.cpp:336
+msgid "Miscellaneous options :"
+msgstr "Opcions de la miscel·lània:"
+
+#: src/dialog_options.cpp:337
+msgid "Move the mouse pointer to follow the active window."
+msgstr "Mou el punter amb el ratolí per seguir la finestra activa."
+
+#: src/dialog_options.cpp:342
+msgid "Move the mouse pointer only if it is over the active window's area"
+msgstr "Mou el punter només si està sobre la finestra activa."
+
+#: src/dialog_options.cpp:346
+msgid "Minimize and Maximize hotkeys gives a 'Minimize / Maximize / Restored' state cycle."
+msgstr "Les tecles per minimitzar i maximitzar dóna un estat de cicle de 'Minimitza/Maximitza/Restaura'"
+
+#: src/dialog_options.cpp:351
+msgid "Misc"
+msgstr "Miscel·lània"
+
+#: src/dialog_options.cpp:421
+#: src/dialog_options.cpp:610
+msgid "Processing"
+msgstr "Processant"
+
+#: src/dialog_options.cpp:510
+msgid "The two modifiers must be different"
+msgstr "Els dos modificadors han de ser diferents"
+
+#: src/dialog_options.cpp:519
+msgid "The value you entered as 'Detection radius' is "
+msgstr "El valor que has escrit com a 'Detecció de radi' és"
+
+#: src/dialog_options.cpp:522
+msgid "too small"
+msgstr "massa petit"
+
+#: src/dialog_options.cpp:523
+msgid "The minimum value you can enter is '20'."
+msgstr "El valor mínim que pots posar és '20'."
+
+#: src/dialog_options.cpp:530
+msgid "too big"
+msgstr "mass agran"
+
+#: src/dialog_options.cpp:531
+msgid "The maximum value you can enter is '500'."
+msgstr "El màxim valor que pots posar és '500'."
+
+#: src/dialog_options.cpp:642
+msgid "You have the latest version of WinSplit Revoluton. Always feel free to check out the website fore more informations"
+msgstr "Tens la darrera versió de Winsplit Revolution.Senteix-te lliure de visitar la web per a obtindre més informació"
+
+#: src/dialog_options.cpp:651
+msgid "Impossible to retrieve host informations"
+msgstr "No és possible comprovar la informació del servidor"
+
+#: src/dialog_options.cpp:674
+#: src/dialog_options.cpp:725
+msgid "Export files|*.export|All files|*.*"
+msgstr "Exporta arxius|*.exporta|Tots els arxius|*.*"
+
+#: src/dialog_options.cpp:687
+msgid "There was an error while creating the export file !"
+msgstr "Ha hagut un error en crear l'arxiu d'exportació"
+
+#: src/dialog_options.cpp:732
+msgid "There was an error while opening the export file !"
+msgstr "Ha hagut un error en obrir l'arxiu d'exportació"
+
+#: src/dialog_selectsettings.cpp:24
+msgid "Select items to export :"
+msgstr "Seleccioneu l'ítem a exportar:"
+
+#: src/dialog_selectsettings.cpp:27
+msgid "Select items to import :"
+msgstr "Seleccioneu l'ítem a importar:"
+
+#: src/dialog_selectsettings.cpp:30
+msgid "Select items to delete :"
+msgstr "Seleccioneu l'ítem a esborrar:"
+
+#: src/dialog_selectsettings.cpp:38
+msgid "Select all"
+msgstr "Sel·lecciona-ho tot"
+
+#: src/dialog_selectsettings.cpp:40
+msgid "Unselect all"
+msgstr "Deseleccionar tots"
+
+#: src/dialog_selectsettings.cpp:42
+msgid "Invert"
+msgstr "Inverteix"
+
+#: src/dialog_selectsettings.cpp:50
+#: src/dialog_warnhotkeys.cpp:26
+msgid "Ok"
+msgstr "Sí"
+
+#: src/dialog_selectsettings.cpp:57
+msgid "General settings"
+msgstr "Configuració General"
+
+#: src/dialog_selectsettings.cpp:58
+msgid "Hotkeys settings"
+msgstr "Configuració de les tecles ràpides"
+
+#: src/dialog_selectsettings.cpp:59
+msgid "Layout settings"
+msgstr "Configuració de l'Aparença"
+
+#: src/dialog_selectsettings.cpp:60
+msgid "Registered placements"
+msgstr "Emplaçaments registrats"
+
+#: src/dialog_warnhotkeys.cpp:27
+msgid "Do not display this message anymore"
+msgstr "No mostris aquest missatge mai més."
+
+#: src/dialog_warnhotkeys.cpp:66
+msgid "Hotkeys has been desactivated, date: "
+msgstr "Les dreceres de teclat han estat desactivades, data:"
+
+#: src/fonctions_speciales.cpp:106
+msgid "This classname from process "
+msgstr "Aquest nom de classe del procés"
+
+#: src/fonctions_speciales.cpp:106
+msgid " is not saved."
+msgstr "no està enregistrat."
+
+#: src/fonctions_speciales.cpp:106
+msgid "Save this process at this placement?"
+msgstr "Vols enregistrar aquest procés en aquesta posició?"
+
+#: src/frame_hook.cpp:53
+msgid "Impossible to install hooks"
+msgstr "Impossible to install hooks"
+
+#: src/frame_hook.cpp:61
+msgid ""
+"Next WinSplit Revolution run in this loging session will probably cause Drag n'go crash\n"
+"Restart your computer may solve this problem"
+msgstr ""
+"La propera execució de WinSplit Revolution pot fer que Drag n'go peti\n"
+"Reiniciar el teu ordinador pot solucionar el problema"
+
+#: src/frame_hook.cpp:63
+msgid "Impossible to uninstall some hooks"
+msgstr "No és possible desinstalar algunes connexions"
+
+#: src/frame_hook.cpp:132
+msgid "Possibilities scroll to switch"
+msgstr "Possibilitats de desplaçament a canviar"
+
+#: src/frame_virtualnumpad.cpp:66
+msgid "Keep"
+msgstr "Mantenir"
+
+#: src/hotkeys_manager.cpp:61
+msgid "Full Screen"
+msgstr "Pantalla Completa"
+
+#: src/hotkeys_manager.cpp:85
+msgid "Restore minimized window"
+msgstr "Recupera el tamany de la finestra minimitzada"
+
+#: src/main.cpp:33
+msgid "Program already running!"
+msgstr "Programa executant-se"
+
+#: src/main.cpp:40
+msgid ""
+"There were errors during initialization !\n"
+"Winsplit Revolution can't start."
+msgstr ""
+"Ha hagut errors durant la inicialització.\n"
+" Winsplit Revolution no pot iniciar-se."
+
+#: src/main.cpp:40
+msgid "Errors"
+msgstr "Errors"
+
+#: src/multimonitor_move.cpp:170
+msgid "Problem to enumerate all screens"
+msgstr "Problemes a l'enumerar totes les pantalles"
+
+#: src/multimonitor_move.cpp:177
+msgid "Problem to detect current screen"
+msgstr "Problema al detectar la pantalla actual"
+
+#: src/settingsmanager.cpp:216
+msgid "Language non supported in WinSplit !"
+msgstr "Aquest idioma no està suportat a WinSplit."
+
+#: src/tray_icon.cpp:107
+msgid "Help"
+msgstr "Ajuda"
+
+#: src/tray_icon.cpp:119
+msgid "Launch with Windows"
+msgstr "Executar amb Windows"
+
+#: src/tray_icon.cpp:122
+msgid "Exit"
+msgstr "Sortir"
+
+#: src/tray_icon.cpp:263
+msgid "Several global hotkeys are already allocated by another program:"
+msgstr "Algunes dreceres de teclat són usades per altre programari"
+
+#: src/tray_icon.cpp:265
+msgid "WinSplit will not invoke them."
+msgstr "WinSplit no les executará"
+
+#: src/tray_icon.cpp:272
+msgid "Hotkeys loading error!"
+msgstr "Error en carregar les dreceres de teclat"
+
+#: src/dialog_layout.h:30
+msgid "Ratio in per cent"
+msgstr "Ràtio per cent"
+
+#, fuzzy
+#~ msgid "Reset settings"
+#~ msgstr "Conf. dreceres teclat"
+#~ msgid "width: "
+#~ msgstr "ample:"
+#~ msgid "height: "
+#~ msgstr "alçada"
+#~ msgid "WinSplit Revolution"
+#~ msgstr "WinSplit Revolution"
+#~ msgid ""
+#~ "Drag'N'Go feature will not be invoked\n"
+#~ "Restart your computer may solve this problem"
+#~ msgstr ""
+#~ "La prestació Drag'N'Gono serà invocada\n"
+#~ "Reiniciar el teu ordinador pot solucionar el problema"
+#~ msgid "Unable to install hooks"
+#~ msgstr "No es pot instal·lar les connexions"
+#~ msgid "About WinSplit revolution v1.9"
+#~ msgstr "Sobre WinSplit revolution v1.9"
+#~ msgid "R@FIX (aka neg'gwada)'s WinSplit revolution."
+#~ msgstr "R@FIX (aka neg'gwada)'s WinSplit revolution."
+#~ msgid "As a Freeware, one have free access binaries located on"
+#~ msgstr "Com a programari gratuit freeware, tens accès als binaris a:"
+#~ msgid "http://reptils.free.fr"
+#~ msgstr "http://reptils.free.fr"
+#~ msgid "Reach me: reptils@free.fr"
+#~ msgstr "Contacte: reptils@free.fr"
+#~ msgid "=================="
+#~ msgstr "=================="
+#~ msgid "Special thanks to:"
+#~ msgstr "Moltes gràcies a:"
+#~ msgid "- Dolan (consulting)"
+#~ msgstr "- Dolan (consulting)"
+#~ msgid "- Pierre (web design)"
+#~ msgstr "- Pierre (diseny web)"
+#~ msgid "- s4nit4rium & Fredinho (testing)"
+#~ msgstr "- s4nit4rium & Fredinho (proves)"
+#~ msgid "Registered processes for auto-positioning"
+#~ msgstr "Registrar processos per a auto-posicionamient:"
+#~ msgid "No internet connection acces"
+#~ msgstr "No hi ha accés a internet"
+#~ msgid "Link:"
+#~ msgstr "Enllaç:"
+#~ msgid "Features:"
+#~ msgstr "Prestacions:"
+#~ msgid "Check update at each:"
+#~ msgstr "Comprova actualització cada:"
+#~ msgid "Startup"
+#~ msgstr "En Inici"
+#~ msgid "Move Up screen"
+#~ msgstr "Moure amunt"
+#~ msgid "Move Down screen"
+#~ msgstr "Moure Avall"
+

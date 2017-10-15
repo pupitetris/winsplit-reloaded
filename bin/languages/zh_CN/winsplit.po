@@ -1,0 +1,865 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WinSplit Revolution\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-02-04 21:37+0100\n"
+"PO-Revision-Date: 2009-02-06 17:11+0800\n"
+"Last-Translator: zivalin <zivalin@hotmail.com>\n"
+"Language-Team: Zivalin <zivalin@hotmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\\..\\..\\\n"
+"X-Poedit-Language: Chinese Simplified\n"
+"X-Poedit-Country: CHINA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: src\n"
+
+#: src/dialog_about.cpp:21
+msgid "About WinSplit Revolution"
+msgstr "关于 WinSplit Revolution"
+
+#: src/dialog_about.cpp:51
+msgid "Created by Raphael Lencrerot."
+msgstr "由 Raphael Lencrerot 建立。"
+
+#: src/dialog_about.cpp:52
+msgid "C++ based software developed thanks to the following:"
+msgstr "基于 C++ 的软体开发要感谢:"
+
+#: src/dialog_about.cpp:53
+msgid "wxWidgets GUI Library and Code::Blocks (C++ IDE)."
+msgstr "wxWidgets GUI 函式库及Code::Blocks (C++ IDE)。"
+
+#: src/dialog_about.cpp:54
+msgid "This software is a Freeware, licensed under Creative Commons License."
+msgstr "此软体是免费软体，授权遵循创作共享协议。"
+
+#: src/dialog_about.cpp:55
+msgid "Attribution-Noncommercial-No Derivative Works 3.0 License."
+msgstr "署名为非商业性使用无衍生作品 3.0 许可。"
+
+#: src/dialog_about.cpp:58
+msgid "WinSplit Revolution Team:"
+msgstr "WinSplit Revolution 团队:"
+
+#: src/dialog_about.cpp:64
+msgid "Some Rights Reserved"
+msgstr "保留部分权利"
+
+#: src/dialog_about.cpp:74
+#: src/dialog_hotkeys.cpp:183
+#: src/dialog_layout.cpp:97
+#: src/dialog_layout.cpp:294
+#: src/dialog_options.cpp:40
+msgid "&Ok"
+msgstr "确定(&O)"
+
+#: src/dialog_activewndtools.cpp:15
+msgid "Tools for the active Window"
+msgstr "当前视窗工具"
+
+#: src/dialog_activewndtools.cpp:81
+msgid "Window style : "
+msgstr "视窗样式 : "
+
+#: src/dialog_activewndtools.cpp:84
+msgid "Enable or disable the 'Always on top' style :"
+msgstr "启用或禁用'总是在最上层' 的样式 :"
+
+#: src/dialog_activewndtools.cpp:86
+#: src/dialog_hotkeys.cpp:374
+#: src/dialog_hotkeys.cpp:388
+msgid "Disable"
+msgstr "禁用"
+
+#: src/dialog_activewndtools.cpp:86
+#: src/dialog_activewndtools.cpp:170
+#: src/dialog_hotkeys.cpp:353
+#: src/dialog_hotkeys.cpp:386
+msgid "Enable"
+msgstr "启用"
+
+#: src/dialog_activewndtools.cpp:91
+msgid "Enable transparency for this window"
+msgstr "使该视窗透明化"
+
+#: src/dialog_activewndtools.cpp:96
+msgid "Change opacity :"
+msgstr "改变不透明度 :"
+
+#: src/dialog_activewndtools.cpp:104
+msgid "Screenshot : "
+msgstr "截图 : "
+
+#: src/dialog_activewndtools.cpp:109
+#, c-format
+msgid "Image size : %0dx%0d"
+msgstr "图片尺寸 : %0dx%0d"
+
+#: src/dialog_activewndtools.cpp:112
+msgid "Save as image file"
+msgstr "储存图片档案"
+
+#: src/dialog_activewndtools.cpp:114
+msgid "Copy to clipboard"
+msgstr "复制到剪贴簿"
+
+#: src/dialog_activewndtools.cpp:137
+msgid "Enter the name of the file to save."
+msgstr "请输入存档档名"
+
+#: src/dialog_activewndtools.cpp:157
+msgid "The image has been copied into the clipboard."
+msgstr "该图片己经复制到剪贴簿。"
+
+#: src/dialog_activewndtools.cpp:157
+msgid "Success"
+msgstr "成功"
+
+#: src/dialog_activewndtools.cpp:159
+msgid "There was an error while opening the clipboard !"
+msgstr "在开启剪贴簿时发生错误!"
+
+#: src/dialog_activewndtools.cpp:159
+#: src/dialog_download.cpp:256
+#: src/dialog_layout.cpp:169
+#: src/dialog_options.cpp:687
+#: src/dialog_options.cpp:732
+msgid "Error"
+msgstr "错误"
+
+#: src/dialog_download.cpp:137
+#: src/dialog_hotkeys.cpp:36
+#: src/dialog_hotkeys.cpp:184
+#: src/dialog_layout.cpp:98
+#: src/dialog_layout.cpp:295
+msgid "&Cancel"
+msgstr "取消(&C)"
+
+#: src/dialog_download.cpp:140
+msgid "&Next"
+msgstr "下一步(&N)"
+
+#: src/dialog_download.cpp:175
+msgid "New version"
+msgstr "新版本"
+
+#: src/dialog_download.cpp:181
+msgid "A new version of WinSplit Revolution is available:"
+msgstr "发现 WinSplit Revolution 的新版本:"
+
+#: src/dialog_download.cpp:182
+msgid "Press next to download the last version."
+msgstr "按“下一步”下载最新版本。"
+
+#: src/dialog_download.cpp:183
+msgid "You can visite the official website http://winsplit-revolution.com to download it."
+msgstr "您可以访问官方网站 http://winsplit-revolution.com 来下载它。"
+
+#: src/dialog_download.cpp:216
+msgid "Press finish to process installation"
+msgstr "按下“完成”开始进行安装"
+
+#: src/dialog_download.cpp:220
+msgid "&Finish"
+msgstr "完成(&F)"
+
+#: src/dialog_download.cpp:256
+msgid "Problem encountered during download stage"
+msgstr "下载过程中遭遇问题"
+
+#: src/dialog_download.cpp:270
+msgid "Are you sure you want to stop downloading the new version?"
+msgstr "您确定要停止下载新的版本吗?"
+
+#: src/dialog_download.cpp:270
+#: src/dialog_layout.cpp:175
+#: src/dialog_layout.cpp:185
+#: src/dialog_layout.cpp:513
+msgid "Warning"
+msgstr "警告"
+
+#: src/dialog_download.cpp:288
+msgid "You should press finish to process installation"
+msgstr "您应当按“完成”进行安装"
+
+#: src/dialog_download.cpp:288
+msgid "Cancel anyway?"
+msgstr "总是取消吗?"
+
+#: src/dialog_download.cpp:289
+msgid "Message"
+msgstr "消息"
+
+#: src/dialog_download.cpp:311
+msgid "Downloading file: "
+msgstr "正在下载文件:"
+
+#: src/dialog_fusion.cpp:13
+#: src/dialog_hotkeys.cpp:298
+#: src/hotkeys_manager.cpp:75
+msgid "Windows fusion"
+msgstr "视窗融合"
+
+#: src/dialog_fusion.cpp:39
+msgid "Switch windows"
+msgstr "切换视窗"
+
+#: src/dialog_fusion.cpp:40
+msgid "Horizontal/Vertical"
+msgstr "水平/垂直"
+
+#: src/dialog_fusion.cpp:41
+#: src/dialog_hotkeys.cpp:276
+msgid "Center"
+msgstr "中心"
+
+#: src/dialog_hotkeys.cpp:35
+msgid "&Apply"
+msgstr "套用(&A)"
+
+#: src/dialog_hotkeys.cpp:117
+msgid "This hotkey is already used by WinSplit"
+msgstr "此热键已经被 WinSplit 使用"
+
+#: src/dialog_hotkeys.cpp:117
+#: src/dialog_hotkeys.cpp:126
+#: src/dialog_hotkeys.cpp:366
+#: src/dialog_options.cpp:510
+#: src/dialog_options.cpp:524
+#: src/dialog_options.cpp:532
+#: src/fonctions_speciales.cpp:108
+msgid "WinSplit message"
+msgstr "WinSplit 消息"
+
+#: src/dialog_hotkeys.cpp:126
+#: src/dialog_hotkeys.cpp:366
+msgid "This hotkey is already used by Windows"
+msgstr "此热键已经被 Windows 使用"
+
+#: src/dialog_hotkeys.cpp:152
+msgid "Hotkey settings"
+msgstr "热键设置"
+
+#: src/dialog_hotkeys.cpp:186
+#: src/dialog_layout.cpp:257
+msgid "&Edit"
+msgstr "编辑(&E)"
+
+#: src/dialog_hotkeys.cpp:187
+msgid "&Disable"
+msgstr "禁用(&D)"
+
+#: src/dialog_hotkeys.cpp:254
+#: src/dialog_layout.cpp:329
+msgid "Action"
+msgstr "动作"
+
+#: src/dialog_hotkeys.cpp:255
+msgid "Hotkey"
+msgstr "热键"
+
+#: src/dialog_hotkeys.cpp:257
+#: src/hotkeys_manager.cpp:49
+msgid "Automatic placement"
+msgstr "自动布局"
+
+#: src/dialog_hotkeys.cpp:261
+#: src/dialog_hotkeys.cpp:265
+#: src/dialog_hotkeys.cpp:269
+#: src/dialog_layout.cpp:332
+#: src/dialog_layout.cpp:335
+#: src/dialog_layout.cpp:338
+#: src/hotkeys_manager.cpp:51
+#: src/hotkeys_manager.cpp:54
+#: src/hotkeys_manager.cpp:56
+msgid "Down"
+msgstr "下移"
+
+#: src/dialog_hotkeys.cpp:261
+#: src/dialog_hotkeys.cpp:273
+#: src/dialog_hotkeys.cpp:283
+#: src/dialog_layout.cpp:332
+#: src/dialog_layout.cpp:341
+#: src/dialog_layout.cpp:348
+#: src/hotkeys_manager.cpp:52
+#: src/hotkeys_manager.cpp:59
+#: src/hotkeys_manager.cpp:66
+msgid "Left"
+msgstr "左移"
+
+#: src/dialog_hotkeys.cpp:269
+#: src/dialog_hotkeys.cpp:279
+#: src/dialog_hotkeys.cpp:291
+#: src/dialog_layout.cpp:338
+#: src/dialog_layout.cpp:345
+#: src/dialog_layout.cpp:354
+#: src/hotkeys_manager.cpp:57
+#: src/hotkeys_manager.cpp:63
+#: src/hotkeys_manager.cpp:71
+msgid "Right"
+msgstr "右移"
+
+#: src/dialog_hotkeys.cpp:283
+#: src/dialog_hotkeys.cpp:287
+#: src/dialog_hotkeys.cpp:291
+#: src/dialog_layout.cpp:348
+#: src/dialog_layout.cpp:351
+#: src/dialog_layout.cpp:354
+#: src/hotkeys_manager.cpp:65
+#: src/hotkeys_manager.cpp:68
+#: src/hotkeys_manager.cpp:70
+msgid "Up"
+msgstr "上移"
+
+#: src/dialog_hotkeys.cpp:295
+#: src/hotkeys_manager.cpp:73
+msgid "Mosaic"
+msgstr "镶嵌(马赛克化)"
+
+#: src/dialog_hotkeys.cpp:301
+#: src/hotkeys_manager.cpp:77
+msgid "Close all window"
+msgstr "关闭所有视窗"
+
+#: src/dialog_hotkeys.cpp:304
+#: src/hotkeys_manager.cpp:79
+msgid "Move to Left screen"
+msgstr "移至荧幕左边"
+
+#: src/dialog_hotkeys.cpp:307
+#: src/hotkeys_manager.cpp:81
+msgid "Move to Right screen"
+msgstr "移至荧幕右边"
+
+#: src/dialog_hotkeys.cpp:310
+#: src/hotkeys_manager.cpp:83
+msgid "Minimize Window"
+msgstr "最小化"
+
+#: src/dialog_hotkeys.cpp:313
+msgid "Maximize window"
+msgstr "最大化"
+
+#: src/dialog_hotkeys.cpp:316
+msgid "Active window tools"
+msgstr "活动视窗工具"
+
+#: src/dialog_layout.cpp:76
+msgid "x"
+msgstr "x"
+
+#: src/dialog_layout.cpp:77
+msgid "y"
+msgstr "y"
+
+#: src/dialog_layout.cpp:78
+#: src/dialog_layout.cpp:387
+#: src/dialog_layout.cpp:418
+msgid "width"
+msgstr "宽度"
+
+#: src/dialog_layout.cpp:79
+#: src/dialog_layout.cpp:391
+#: src/dialog_layout.cpp:419
+msgid "height"
+msgstr "高度"
+
+#: src/dialog_layout.cpp:169
+msgid "Invalide entry, value must be between 0. and 100."
+msgstr "无效的项目，值必须介于 0 和 100 之间。"
+
+#: src/dialog_layout.cpp:175
+msgid ""
+"This settings define a window outside the screen!\n"
+" Continue anyway?"
+msgstr ""
+"此设置定义了一个处于荧幕外的窗口!\n"
+"仍然要继续吗?"
+
+#: src/dialog_layout.cpp:185
+msgid ""
+"This settings define a very small window screen!\n"
+" Continue anyway?"
+msgstr ""
+"此设置定义了一个非常小的视窗荧幕!\n"
+"仍然要继续吗?"
+
+#: src/dialog_layout.cpp:256
+msgid "&Add"
+msgstr "增加(&A)"
+
+#: src/dialog_layout.cpp:258
+#: src/dialog_options.cpp:99
+msgid "&Delete"
+msgstr "删除(&D)"
+
+#: src/dialog_layout.cpp:275
+msgid "x:"
+msgstr "x:"
+
+#: src/dialog_layout.cpp:276
+msgid "y:"
+msgstr "y:"
+
+#: src/dialog_layout.cpp:277
+msgid "width:"
+msgstr "宽度:"
+
+#: src/dialog_layout.cpp:278
+msgid "height:"
+msgstr "高度:"
+
+#: src/dialog_layout.cpp:303
+msgid "Preview"
+msgstr "预览"
+
+#: src/dialog_layout.cpp:330
+msgid "Sequence in per cent"
+msgstr "百分比格式序列"
+
+#: src/dialog_layout.cpp:343
+msgid "Middle"
+msgstr "置中"
+
+#: src/dialog_layout.cpp:509
+msgid "One task must have at least one possibility"
+msgstr "一个任务必须拥有至少一个可能性"
+
+#: src/dialog_layout.cpp:513
+msgid "Are you sure you want delete this entry?"
+msgstr "您确定要删除此项目吗?"
+
+#: src/dialog_options.cpp:13
+#: src/dialog_selectsettings.cpp:4
+msgid "Options"
+msgstr "选项"
+
+#: src/dialog_options.cpp:42
+#: src/dialog_selectsettings.cpp:52
+msgid "Cancel"
+msgstr "取消"
+
+#: src/dialog_options.cpp:44
+msgid "Apply"
+msgstr "套用"
+
+#: src/dialog_options.cpp:82
+msgid "Language"
+msgstr "语言"
+
+#: src/dialog_options.cpp:83
+msgid "Choose language"
+msgstr "选择语言"
+
+#: src/dialog_options.cpp:92
+msgid "Miscellaneous"
+msgstr "杂项"
+
+#: src/dialog_options.cpp:93
+msgid "Take into account topmost windows"
+msgstr "考虑到最上层视窗"
+
+#: src/dialog_options.cpp:98
+msgid "Delete saved Auto-placements"
+msgstr "删除已保存的自动布局"
+
+#: src/dialog_options.cpp:106
+msgid "Screenshots temporary files"
+msgstr "截图暂存文件"
+
+#: src/dialog_options.cpp:108
+msgid "Delete automatically"
+msgstr "自动删除"
+
+#: src/dialog_options.cpp:113
+msgid "When WinSplit starts"
+msgstr "当WinSplit启动"
+
+#: src/dialog_options.cpp:114
+msgid "When WinSplit ends"
+msgstr "当WinSplit 结束"
+
+#: src/dialog_options.cpp:118
+msgid "Open folder"
+msgstr "开启目录"
+
+#: src/dialog_options.cpp:124
+msgid "Settings managements"
+msgstr "设定管理"
+
+#: src/dialog_options.cpp:125
+#: src/dialog_options.cpp:672
+msgid "Export settings"
+msgstr "汇出设定"
+
+#: src/dialog_options.cpp:127
+#: src/dialog_options.cpp:723
+msgid "Import settings"
+msgstr "汇入设定"
+
+#: src/dialog_options.cpp:132
+msgid "General"
+msgstr "一般"
+
+#: src/dialog_options.cpp:145
+#: src/dialog_options.cpp:410
+msgid "No registered process"
+msgstr "没有注册的进程"
+
+#: src/dialog_options.cpp:163
+msgid "Virtual numpad options"
+msgstr "虚拟数字键盘选项"
+
+#: src/dialog_options.cpp:164
+msgid "Save Virtual numpad state when exit"
+msgstr "退出时保存虚拟数字键盘状态"
+
+#: src/dialog_options.cpp:167
+msgid "Show Virtual numpad at starting"
+msgstr "启动时显示虚拟数字键盘"
+
+#: src/dialog_options.cpp:170
+msgid "Hide Virtual numpad after a virtual key selection"
+msgstr "选择了一个虚拟键后隐藏虚拟数字键盘"
+
+#: src/dialog_options.cpp:175
+msgid "Virtual numpad style"
+msgstr "虚拟数字键盘样式"
+
+#: src/dialog_options.cpp:176
+msgid "Adjust Virtual numpad transparency"
+msgstr "调整虚拟数字键盘透明度"
+
+#: src/dialog_options.cpp:182
+msgid "Virtual numpad"
+msgstr "虚拟数字键盘"
+
+#: src/dialog_options.cpp:196
+msgid "Checking for update"
+msgstr "检查更新"
+
+#: src/dialog_options.cpp:197
+msgid "Check website for Winsplit updates"
+msgstr "检查网站上的 WinSplit 更新"
+
+#: src/dialog_options.cpp:201
+msgid "Web updates check frequency :"
+msgstr "网站更新检查频率:"
+
+#: src/dialog_options.cpp:205
+msgid "At start"
+msgstr "启动时"
+
+#: src/dialog_options.cpp:206
+msgid "Weekly"
+msgstr "每周"
+
+#: src/dialog_options.cpp:207
+msgid "Monthly"
+msgstr "每月"
+
+#: src/dialog_options.cpp:214
+msgid "Manual check :"
+msgstr "手动检查:"
+
+#: src/dialog_options.cpp:215
+msgid "Perform a manual web update check now"
+msgstr "立即执行一次手动网站更新检查"
+
+#: src/dialog_options.cpp:216
+msgid "Check now"
+msgstr "立即检查"
+
+#: src/dialog_options.cpp:222
+msgid "Web update"
+msgstr "网站更新"
+
+#: src/dialog_options.cpp:238
+msgid "Drag'N'Go settings :"
+msgstr "吸附设置:"
+
+#: src/dialog_options.cpp:240
+msgid "Enable Drag'N'Go"
+msgstr "启用吸附"
+
+#: src/dialog_options.cpp:244
+msgid "Detection radius :"
+msgstr "检测范围:"
+
+#: src/dialog_options.cpp:260
+msgid "Destination zone style :"
+msgstr "目标区域样式:"
+
+#: src/dialog_options.cpp:262
+msgid "Click here to select preview zone background color :"
+msgstr "点击这里选择预览区域背景颜色:"
+
+#: src/dialog_options.cpp:266
+msgid "Click here to select preview zone text color :"
+msgstr "点击这里选择预览区域文本颜色:"
+
+#: src/dialog_options.cpp:272
+msgid "Adjust destination zone transparency"
+msgstr "调整目标区域透明度"
+
+#: src/dialog_options.cpp:278
+msgid "Modifier Activation :"
+msgstr "变更触发"
+
+#: src/dialog_options.cpp:292
+msgid "Modifier to active Drag'N'Go :"
+msgstr "触发吸附(Drag'N'Go)功能快速键:"
+
+#: src/dialog_options.cpp:299
+msgid "Drag'N'Go"
+msgstr "吸附"
+
+#: src/dialog_options.cpp:314
+msgid "Windows 'Active Window Tracking' built-in functionnality :"
+msgstr ""
+
+#: src/dialog_options.cpp:315
+msgid "Any modification here needs at least a session restart to take effect."
+msgstr "在这任何的变更都必须要重新启动才能生效。"
+
+#: src/dialog_options.cpp:317
+msgid "Enable the Windows 'Active Window Tracking' built-in functionnality."
+msgstr ""
+
+#: src/dialog_options.cpp:322
+msgid "Active Window Tracking will bring the window to the top."
+msgstr ""
+
+#: src/dialog_options.cpp:328
+msgid "Delay before the action of the 'Active Window Tracking' (milliseconds):"
+msgstr ""
+
+#: src/dialog_options.cpp:336
+msgid "Miscellaneous options :"
+msgstr "其它选项："
+
+#: src/dialog_options.cpp:337
+msgid "Move the mouse pointer to follow the active window."
+msgstr "移动游标跟随当前视窗"
+
+#: src/dialog_options.cpp:342
+msgid "Move the mouse pointer only if it is over the active window's area"
+msgstr "移动游标只有当它是在当前视窗区域时才移动"
+
+#: src/dialog_options.cpp:346
+msgid "Minimize and Maximize hotkeys gives a 'Minimize / Maximize / Restored' state cycle."
+msgstr "使最小化和最大化的快速键可以依序‘最小/最大/还原’循环"
+
+#: src/dialog_options.cpp:351
+msgid "Misc"
+msgstr "杂项"
+
+#: src/dialog_options.cpp:421
+#: src/dialog_options.cpp:610
+msgid "Processing"
+msgstr "正在处理"
+
+#: src/dialog_options.cpp:510
+msgid "The two modifiers must be different"
+msgstr "这二个修改必须不同"
+
+#: src/dialog_options.cpp:519
+msgid "The value you entered as 'Detection radius' is "
+msgstr "您输入作为“检查范围”的值为"
+
+#: src/dialog_options.cpp:522
+msgid "too small"
+msgstr "过小"
+
+#: src/dialog_options.cpp:523
+msgid "The minimum value you can enter is '20'."
+msgstr "您可以输入的最小值为“20”。"
+
+#: src/dialog_options.cpp:530
+msgid "too big"
+msgstr "过大"
+
+#: src/dialog_options.cpp:531
+msgid "The maximum value you can enter is '500'."
+msgstr "您可以输入的最大值为“500”。"
+
+#: src/dialog_options.cpp:642
+msgid "You have the latest version of WinSplit Revoluton. Always feel free to check out the website fore more informations"
+msgstr "您的 WinSplit Revoluton 是最新版。请随时检查网站以获得更多信息"
+
+#: src/dialog_options.cpp:651
+msgid "Impossible to retrieve host informations"
+msgstr "无法接收到主机信息"
+
+#: src/dialog_options.cpp:674
+#: src/dialog_options.cpp:725
+msgid "Export files|*.export|All files|*.*"
+msgstr "汇出档案(*.export)|*.export|所有档案(*.* )|*.*"
+
+#: src/dialog_options.cpp:687
+msgid "There was an error while creating the export file !"
+msgstr "在汇出档案时发生错误!"
+
+#: src/dialog_options.cpp:732
+msgid "There was an error while opening the export file !"
+msgstr "在开启汇出档时发生错误!"
+
+#: src/dialog_selectsettings.cpp:24
+msgid "Select items to export :"
+msgstr "选取要汇出的项目"
+
+#: src/dialog_selectsettings.cpp:27
+msgid "Select items to import :"
+msgstr "选取要汇入的项目"
+
+#: src/dialog_selectsettings.cpp:30
+msgid "Select items to delete :"
+msgstr "选取要删除的项目"
+
+#: src/dialog_selectsettings.cpp:38
+msgid "Select all"
+msgstr "全选"
+
+#: src/dialog_selectsettings.cpp:40
+msgid "Unselect all"
+msgstr "全不选"
+
+#: src/dialog_selectsettings.cpp:42
+msgid "Invert"
+msgstr "转化"
+
+#: src/dialog_selectsettings.cpp:50
+#: src/dialog_warnhotkeys.cpp:26
+msgid "Ok"
+msgstr "确定"
+
+#: src/dialog_selectsettings.cpp:57
+msgid "General settings"
+msgstr "一般设置"
+
+#: src/dialog_selectsettings.cpp:58
+msgid "Hotkeys settings"
+msgstr "热键设置"
+
+#: src/dialog_selectsettings.cpp:59
+msgid "Layout settings"
+msgstr "布局设置"
+
+#: src/dialog_selectsettings.cpp:60
+msgid "Registered placements"
+msgstr "注册位置"
+
+#: src/dialog_warnhotkeys.cpp:27
+msgid "Do not display this message anymore"
+msgstr "不要再显示此消息"
+
+#: src/dialog_warnhotkeys.cpp:66
+msgid "Hotkeys has been desactivated, date: "
+msgstr "热键已被停用，日期:"
+
+#: src/fonctions_speciales.cpp:106
+msgid "This classname from process "
+msgstr "此类名来自进程"
+
+#: src/fonctions_speciales.cpp:106
+msgid " is not saved."
+msgstr "尚未储存。"
+
+#: src/fonctions_speciales.cpp:106
+msgid "Save this process at this placement?"
+msgstr "在此布局保存此进程?"
+
+#: src/frame_hook.cpp:53
+msgid "Impossible to install hooks"
+msgstr "无法安装钩子"
+
+#: src/frame_hook.cpp:61
+msgid ""
+"Next WinSplit Revolution run in this loging session will probably cause Drag n'go crash\n"
+"Restart your computer may solve this problem"
+msgstr ""
+"WinSplit Revolution 下次在此记录会话里运行将可能导致吸附功能崩溃\n"
+"重启您的电脑也许会解决此问题"
+
+#: src/frame_hook.cpp:63
+msgid "Impossible to uninstall some hooks"
+msgstr "无法卸载一些钩子"
+
+#: src/frame_hook.cpp:132
+msgid "Possibilities scroll to switch"
+msgstr "滚动切换可能性"
+
+#: src/frame_virtualnumpad.cpp:66
+msgid "Keep"
+msgstr "保持"
+
+#: src/hotkeys_manager.cpp:61
+msgid "Full Screen"
+msgstr "全荧幕"
+
+#: src/hotkeys_manager.cpp:85
+msgid "Restore minimized window"
+msgstr "还原最小化的视窗"
+
+#: src/main.cpp:33
+msgid "Program already running!"
+msgstr "程序已经运行!"
+
+#: src/main.cpp:40
+msgid ""
+"There were errors during initialization !\n"
+"Winsplit Revolution can't start."
+msgstr ""
+"初始化错误!\n"
+"WinSplit Revolution 无法启动。"
+
+#: src/main.cpp:40
+msgid "Errors"
+msgstr "错误"
+
+#: src/multimonitor_move.cpp:170
+msgid "Problem to enumerate all screens"
+msgstr "列举所有荧幕遇到问题"
+
+#: src/multimonitor_move.cpp:177
+msgid "Problem to detect current screen"
+msgstr "检测当前荧幕遇到问题"
+
+#: src/settingsmanager.cpp:216
+msgid "Language non supported in WinSplit !"
+msgstr "WindSplit 不支持此语言!"
+
+#: src/tray_icon.cpp:107
+msgid "Help"
+msgstr "帮助"
+
+#: src/tray_icon.cpp:119
+msgid "Launch with Windows"
+msgstr "随 Windows 启动"
+
+#: src/tray_icon.cpp:122
+msgid "Exit"
+msgstr "退出"
+
+#: src/tray_icon.cpp:263
+msgid "Several global hotkeys are already allocated by another program:"
+msgstr "几个全域热键已经被其它程序分配:"
+
+#: src/tray_icon.cpp:265
+msgid "WinSplit will not invoke them."
+msgstr "WinSplit 将不调用它们。"
+
+#: src/tray_icon.cpp:272
+msgid "Hotkeys loading error!"
+msgstr "热键加载错误!"
+
+#: src/dialog_layout.h:30
+msgid "Ratio in per cent"
+msgstr "百分比"
+
+#, fuzzy
+#~ msgid "Reset settings"
+#~ msgstr "热键设置"
+

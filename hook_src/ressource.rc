@@ -1,0 +1,28 @@
+#include <windows.h>
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 9,0,2,0
+ FILEFLAGSMASK 0x3fL
+ FILEFLAGS 0x0L
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040c04b0"
+        BEGIN
+            VALUE "FileDescription", "WinSplit Hook Library"
+            VALUE "FileVersion", "9.02"
+            VALUE "InternalName", "WinSplit"
+            VALUE "LegalCopyright", "Copyright (c) 2009"
+            VALUE "OriginalFilename", "WinSplitHook.dll"
+            VALUE "ProductName", "WinSplit Revolution"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x40c, 1200
+    END
+END
+

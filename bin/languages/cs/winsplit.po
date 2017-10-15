@@ -1,0 +1,876 @@
+# Message catalog file template for WinSplit Revolution
+# Copyright (C) 2008 WinSplit Revolution Developpement Team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WinSplit Revolution\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-02-04 21:36+0100\n"
+"PO-Revision-Date: 2009-02-04 21:36+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\\..\\..\\\n"
+"X-Poedit-Language: Czech\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: src\n"
+
+#: src/dialog_about.cpp:21
+msgid "About WinSplit Revolution"
+msgstr "O programu WinSplit Revolution"
+
+#: src/dialog_about.cpp:51
+msgid "Created by Raphael Lencrerot."
+msgstr "Autor programu Raphael Lencrerot."
+
+#: src/dialog_about.cpp:52
+msgid "C++ based software developed thanks to the following:"
+msgstr "Software založený na C++ byl byl vyvinut pomocí:"
+
+#: src/dialog_about.cpp:53
+msgid "wxWidgets GUI Library and Code::Blocks (C++ IDE)."
+msgstr "wxWidgets GUI Library and Code::Blocks (C++ IDE)."
+
+#: src/dialog_about.cpp:54
+msgid "This software is a Freeware, licensed under Creative Commons License."
+msgstr "Tento program je Freeware, licencován pod Creative Commons License."
+
+#: src/dialog_about.cpp:55
+msgid "Attribution-Noncommercial-No Derivative Works 3.0 License."
+msgstr "Attribution-Noncommercial-No Derivative Works 3.0 License."
+
+#: src/dialog_about.cpp:58
+msgid "WinSplit Revolution Team:"
+msgstr "WinSplit Revolution Team:"
+
+#: src/dialog_about.cpp:64
+msgid "Some Rights Reserved"
+msgstr "Některá práva vyhrazena"
+
+#: src/dialog_about.cpp:74
+#: src/dialog_hotkeys.cpp:183
+#: src/dialog_layout.cpp:97
+#: src/dialog_layout.cpp:294
+#: src/dialog_options.cpp:40
+msgid "&Ok"
+msgstr "&Ok"
+
+#: src/dialog_activewndtools.cpp:15
+msgid "Tools for the active Window"
+msgstr ""
+
+#: src/dialog_activewndtools.cpp:81
+msgid "Window style : "
+msgstr ""
+
+#: src/dialog_activewndtools.cpp:84
+msgid "Enable or disable the 'Always on top' style :"
+msgstr ""
+
+#: src/dialog_activewndtools.cpp:86
+#: src/dialog_hotkeys.cpp:374
+#: src/dialog_hotkeys.cpp:388
+msgid "Disable"
+msgstr "Zakázat"
+
+#: src/dialog_activewndtools.cpp:86
+#: src/dialog_activewndtools.cpp:170
+#: src/dialog_hotkeys.cpp:353
+#: src/dialog_hotkeys.cpp:386
+msgid "Enable"
+msgstr "Povolit"
+
+#: src/dialog_activewndtools.cpp:91
+msgid "Enable transparency for this window"
+msgstr ""
+
+#: src/dialog_activewndtools.cpp:96
+msgid "Change opacity :"
+msgstr ""
+
+#: src/dialog_activewndtools.cpp:104
+msgid "Screenshot : "
+msgstr ""
+
+#: src/dialog_activewndtools.cpp:109
+#, c-format
+msgid "Image size : %0dx%0d"
+msgstr ""
+
+#: src/dialog_activewndtools.cpp:112
+msgid "Save as image file"
+msgstr ""
+
+#: src/dialog_activewndtools.cpp:114
+msgid "Copy to clipboard"
+msgstr ""
+
+#: src/dialog_activewndtools.cpp:137
+msgid "Enter the name of the file to save."
+msgstr ""
+
+#: src/dialog_activewndtools.cpp:157
+msgid "The image has been copied into the clipboard."
+msgstr ""
+
+#: src/dialog_activewndtools.cpp:157
+msgid "Success"
+msgstr ""
+
+#: src/dialog_activewndtools.cpp:159
+msgid "There was an error while opening the clipboard !"
+msgstr ""
+
+#: src/dialog_activewndtools.cpp:159
+#: src/dialog_download.cpp:256
+#: src/dialog_layout.cpp:169
+#: src/dialog_options.cpp:687
+#: src/dialog_options.cpp:732
+msgid "Error"
+msgstr "Chyba"
+
+#: src/dialog_download.cpp:137
+#: src/dialog_hotkeys.cpp:36
+#: src/dialog_hotkeys.cpp:184
+#: src/dialog_layout.cpp:98
+#: src/dialog_layout.cpp:295
+msgid "&Cancel"
+msgstr "&Storno"
+
+#: src/dialog_download.cpp:140
+msgid "&Next"
+msgstr "&Další"
+
+#: src/dialog_download.cpp:175
+msgid "New version"
+msgstr "Nová verze"
+
+#: src/dialog_download.cpp:181
+msgid "A new version of WinSplit Revolution is available:"
+msgstr "Je dostupná nová verze programu WinSplit Revolution:"
+
+#: src/dialog_download.cpp:182
+msgid "Press next to download the last version."
+msgstr "Pro stažení poslední verze stiskněte 'Další'."
+
+#: src/dialog_download.cpp:183
+msgid "You can visite the official website http://winsplit-revolution.com to download it."
+msgstr "Pro stažení navštivte domovskou stránku http://winsplit-revolution.com"
+
+#: src/dialog_download.cpp:216
+msgid "Press finish to process installation"
+msgstr "Stiskněte Dokončit pro spuštění instalace"
+
+#: src/dialog_download.cpp:220
+msgid "&Finish"
+msgstr "&Dokončit"
+
+#: src/dialog_download.cpp:256
+msgid "Problem encountered during download stage"
+msgstr "Nastal problém během procesu stahování"
+
+#: src/dialog_download.cpp:270
+msgid "Are you sure you want to stop downloading the new version?"
+msgstr "Opravdu si přejete přerušit stahování nové verze?"
+
+#: src/dialog_download.cpp:270
+#: src/dialog_layout.cpp:175
+#: src/dialog_layout.cpp:185
+#: src/dialog_layout.cpp:513
+msgid "Warning"
+msgstr "Upozornění"
+
+#: src/dialog_download.cpp:288
+msgid "You should press finish to process installation"
+msgstr "Pro spuštění instalace stiskněte tlačítko Dokončit"
+
+#: src/dialog_download.cpp:288
+msgid "Cancel anyway?"
+msgstr "Prejete si zrušit akci?"
+
+#: src/dialog_download.cpp:289
+msgid "Message"
+msgstr "Zpráva"
+
+#: src/dialog_download.cpp:311
+msgid "Downloading file: "
+msgstr "Stahuji soubor:"
+
+#: src/dialog_fusion.cpp:13
+#: src/dialog_hotkeys.cpp:298
+#: src/hotkeys_manager.cpp:75
+msgid "Windows fusion"
+msgstr "Seřazení oken"
+
+#: src/dialog_fusion.cpp:39
+msgid "Switch windows"
+msgstr "Zaměnit okna"
+
+#: src/dialog_fusion.cpp:40
+msgid "Horizontal/Vertical"
+msgstr "Vodorovně/Svisle"
+
+#: src/dialog_fusion.cpp:41
+#: src/dialog_hotkeys.cpp:276
+msgid "Center"
+msgstr "uprostřed"
+
+#: src/dialog_hotkeys.cpp:35
+msgid "&Apply"
+msgstr "&Použít"
+
+#: src/dialog_hotkeys.cpp:117
+msgid "This hotkey is already used by WinSplit"
+msgstr "Tato klávesová zkratka je již v programu WinSplit  použita"
+
+#: src/dialog_hotkeys.cpp:117
+#: src/dialog_hotkeys.cpp:126
+#: src/dialog_hotkeys.cpp:366
+#: src/dialog_options.cpp:510
+#: src/dialog_options.cpp:524
+#: src/dialog_options.cpp:532
+#: src/fonctions_speciales.cpp:108
+msgid "WinSplit message"
+msgstr "Zpráva WinSplit"
+
+#: src/dialog_hotkeys.cpp:126
+#: src/dialog_hotkeys.cpp:366
+msgid "This hotkey is already used by Windows"
+msgstr "Tato klávesová zkratka je již ve Windows použita"
+
+#: src/dialog_hotkeys.cpp:152
+msgid "Hotkey settings"
+msgstr "Nastavení klávesových zkratek"
+
+#: src/dialog_hotkeys.cpp:186
+#: src/dialog_layout.cpp:257
+msgid "&Edit"
+msgstr "&Upravit"
+
+#: src/dialog_hotkeys.cpp:187
+msgid "&Disable"
+msgstr "&Zakázat"
+
+#: src/dialog_hotkeys.cpp:254
+#: src/dialog_layout.cpp:329
+msgid "Action"
+msgstr "Úloha"
+
+#: src/dialog_hotkeys.cpp:255
+msgid "Hotkey"
+msgstr "Klávesové zkratky"
+
+#: src/dialog_hotkeys.cpp:257
+#: src/hotkeys_manager.cpp:49
+msgid "Automatic placement"
+msgstr "Automatické umístění"
+
+#: src/dialog_hotkeys.cpp:261
+#: src/dialog_hotkeys.cpp:265
+#: src/dialog_hotkeys.cpp:269
+#: src/dialog_layout.cpp:332
+#: src/dialog_layout.cpp:335
+#: src/dialog_layout.cpp:338
+#: src/hotkeys_manager.cpp:51
+#: src/hotkeys_manager.cpp:54
+#: src/hotkeys_manager.cpp:56
+msgid "Down"
+msgstr "dole"
+
+#: src/dialog_hotkeys.cpp:261
+#: src/dialog_hotkeys.cpp:273
+#: src/dialog_hotkeys.cpp:283
+#: src/dialog_layout.cpp:332
+#: src/dialog_layout.cpp:341
+#: src/dialog_layout.cpp:348
+#: src/hotkeys_manager.cpp:52
+#: src/hotkeys_manager.cpp:59
+#: src/hotkeys_manager.cpp:66
+msgid "Left"
+msgstr "vlevo"
+
+#: src/dialog_hotkeys.cpp:269
+#: src/dialog_hotkeys.cpp:279
+#: src/dialog_hotkeys.cpp:291
+#: src/dialog_layout.cpp:338
+#: src/dialog_layout.cpp:345
+#: src/dialog_layout.cpp:354
+#: src/hotkeys_manager.cpp:57
+#: src/hotkeys_manager.cpp:63
+#: src/hotkeys_manager.cpp:71
+msgid "Right"
+msgstr "vpravo"
+
+#: src/dialog_hotkeys.cpp:283
+#: src/dialog_hotkeys.cpp:287
+#: src/dialog_hotkeys.cpp:291
+#: src/dialog_layout.cpp:348
+#: src/dialog_layout.cpp:351
+#: src/dialog_layout.cpp:354
+#: src/hotkeys_manager.cpp:65
+#: src/hotkeys_manager.cpp:68
+#: src/hotkeys_manager.cpp:70
+msgid "Up"
+msgstr "nahoře"
+
+#: src/dialog_hotkeys.cpp:295
+#: src/hotkeys_manager.cpp:73
+msgid "Mosaic"
+msgstr "Mozaika"
+
+#: src/dialog_hotkeys.cpp:301
+#: src/hotkeys_manager.cpp:77
+msgid "Close all window"
+msgstr "Zavřít všechna okna"
+
+#: src/dialog_hotkeys.cpp:304
+#: src/hotkeys_manager.cpp:79
+msgid "Move to Left screen"
+msgstr "Přesunout na levou stranu"
+
+#: src/dialog_hotkeys.cpp:307
+#: src/hotkeys_manager.cpp:81
+msgid "Move to Right screen"
+msgstr "Přesunout na pravou stranu"
+
+#: src/dialog_hotkeys.cpp:310
+#: src/hotkeys_manager.cpp:83
+msgid "Minimize Window"
+msgstr "Minimalizovat okno"
+
+#: src/dialog_hotkeys.cpp:313
+msgid "Maximize window"
+msgstr "Maximalizovat okno"
+
+#: src/dialog_hotkeys.cpp:316
+msgid "Active window tools"
+msgstr ""
+
+#: src/dialog_layout.cpp:76
+msgid "x"
+msgstr "x"
+
+#: src/dialog_layout.cpp:77
+msgid "y"
+msgstr "y"
+
+#: src/dialog_layout.cpp:78
+#: src/dialog_layout.cpp:387
+#: src/dialog_layout.cpp:418
+msgid "width"
+msgstr "šířka"
+
+#: src/dialog_layout.cpp:79
+#: src/dialog_layout.cpp:391
+#: src/dialog_layout.cpp:419
+msgid "height"
+msgstr "výška"
+
+#: src/dialog_layout.cpp:169
+msgid "Invalide entry, value must be between 0. and 100."
+msgstr "Neplatný vstup, hodnota musí být mezi 0 a 100."
+
+#: src/dialog_layout.cpp:175
+msgid ""
+"This settings define a window outside the screen!\n"
+" Continue anyway?"
+msgstr ""
+"Toto nastavení definuje umístěni okna mimo obrazovku!\n"
+"Přejete si přesto pokračovat?"
+
+#: src/dialog_layout.cpp:185
+msgid ""
+"This settings define a very small window screen!\n"
+" Continue anyway?"
+msgstr ""
+"Toto nastavení definuje příliš malé okno obrazovky!\n"
+"Přejete si přesto pokračovat?"
+
+#: src/dialog_layout.cpp:256
+msgid "&Add"
+msgstr "Přid&at"
+
+#: src/dialog_layout.cpp:258
+#: src/dialog_options.cpp:99
+msgid "&Delete"
+msgstr "O&dstranit"
+
+#: src/dialog_layout.cpp:275
+msgid "x:"
+msgstr "x:"
+
+#: src/dialog_layout.cpp:276
+msgid "y:"
+msgstr "y:"
+
+#: src/dialog_layout.cpp:277
+msgid "width:"
+msgstr "šířka:"
+
+#: src/dialog_layout.cpp:278
+msgid "height:"
+msgstr "výška:"
+
+#: src/dialog_layout.cpp:303
+msgid "Preview"
+msgstr "Náhled"
+
+#: src/dialog_layout.cpp:330
+msgid "Sequence in per cent"
+msgstr "Rozložení v procentech"
+
+#: src/dialog_layout.cpp:343
+msgid "Middle"
+msgstr "uprostřed"
+
+#: src/dialog_layout.cpp:509
+msgid "One task must have at least one possibility"
+msgstr "Úloha musí mít nejméně jednu možnost"
+
+#: src/dialog_layout.cpp:513
+msgid "Are you sure you want delete this entry?"
+msgstr "Opravdu si přejete odstranit tento záznam?"
+
+#: src/dialog_options.cpp:13
+#: src/dialog_selectsettings.cpp:4
+msgid "Options"
+msgstr "Nastavení programu"
+
+#: src/dialog_options.cpp:42
+#: src/dialog_selectsettings.cpp:52
+msgid "Cancel"
+msgstr "Storno"
+
+#: src/dialog_options.cpp:44
+msgid "Apply"
+msgstr "Použít"
+
+#: src/dialog_options.cpp:82
+msgid "Language"
+msgstr "Jazyk"
+
+#: src/dialog_options.cpp:83
+msgid "Choose language"
+msgstr "Zvolte jazyk"
+
+#: src/dialog_options.cpp:92
+msgid "Miscellaneous"
+msgstr "Ostatní"
+
+#: src/dialog_options.cpp:93
+msgid "Take into account topmost windows"
+msgstr "Převzít do účtu nejhornější okno"
+
+#: src/dialog_options.cpp:98
+msgid "Delete saved Auto-placements"
+msgstr "Odstranit automaticky uložená umístění"
+
+#: src/dialog_options.cpp:106
+msgid "Screenshots temporary files"
+msgstr ""
+
+#: src/dialog_options.cpp:108
+msgid "Delete automatically"
+msgstr ""
+
+#: src/dialog_options.cpp:113
+#, fuzzy
+msgid "When WinSplit starts"
+msgstr "Zpráva WinSplit"
+
+#: src/dialog_options.cpp:114
+#, fuzzy
+msgid "When WinSplit ends"
+msgstr "Zpráva WinSplit"
+
+#: src/dialog_options.cpp:118
+msgid "Open folder"
+msgstr ""
+
+#: src/dialog_options.cpp:124
+msgid "Settings managements"
+msgstr ""
+
+#: src/dialog_options.cpp:125
+#: src/dialog_options.cpp:672
+#, fuzzy
+msgid "Export settings"
+msgstr "Nastavení klávesových zkratek"
+
+#: src/dialog_options.cpp:127
+#: src/dialog_options.cpp:723
+#, fuzzy
+msgid "Import settings"
+msgstr "Nastavení klávesových zkratek"
+
+#: src/dialog_options.cpp:132
+msgid "General"
+msgstr "Obecné"
+
+#: src/dialog_options.cpp:145
+#: src/dialog_options.cpp:410
+msgid "No registered process"
+msgstr "Neregistrovaný proces"
+
+#: src/dialog_options.cpp:163
+msgid "Virtual numpad options"
+msgstr "Možnosti virtuální klávesnice"
+
+#: src/dialog_options.cpp:164
+msgid "Save Virtual numpad state when exit"
+msgstr "Uložit nastavení virtuální klávesnice při ukončení"
+
+#: src/dialog_options.cpp:167
+msgid "Show Virtual numpad at starting"
+msgstr "Zobrazit virtuální klávesnici při spuštění"
+
+#: src/dialog_options.cpp:170
+msgid "Hide Virtual numpad after a virtual key selection"
+msgstr "Skrýt virtuální klávesnici po výběru virtuální klávesy"
+
+#: src/dialog_options.cpp:175
+msgid "Virtual numpad style"
+msgstr "Styl virtuální klávesnice"
+
+#: src/dialog_options.cpp:176
+msgid "Adjust Virtual numpad transparency"
+msgstr "Nastavení průhlednosti virtuální klávesnice"
+
+#: src/dialog_options.cpp:182
+msgid "Virtual numpad"
+msgstr "Virtuální klávesnice"
+
+#: src/dialog_options.cpp:196
+msgid "Checking for update"
+msgstr "Ověření aktualizace"
+
+#: src/dialog_options.cpp:197
+msgid "Check website for Winsplit updates"
+msgstr "Vyhledat aktualizaci programu WinSplit"
+
+#: src/dialog_options.cpp:201
+msgid "Web updates check frequency :"
+msgstr "Ověřit aktualizace na webu :"
+
+#: src/dialog_options.cpp:205
+msgid "At start"
+msgstr "při spuštění"
+
+#: src/dialog_options.cpp:206
+msgid "Weekly"
+msgstr "týdně"
+
+#: src/dialog_options.cpp:207
+msgid "Monthly"
+msgstr "měsíčně"
+
+#: src/dialog_options.cpp:214
+msgid "Manual check :"
+msgstr "Manuální ověření"
+
+#: src/dialog_options.cpp:215
+msgid "Perform a manual web update check now"
+msgstr "Manuální vyhledání aktualizace na webu"
+
+#: src/dialog_options.cpp:216
+msgid "Check now"
+msgstr "Ověřit nyní"
+
+#: src/dialog_options.cpp:222
+msgid "Web update"
+msgstr "Aktualizace"
+
+#: src/dialog_options.cpp:238
+msgid "Drag'N'Go settings :"
+msgstr "Nastavení Drag'N'Go"
+
+#: src/dialog_options.cpp:240
+msgid "Enable Drag'N'Go"
+msgstr "Povolit Drag'N'Go"
+
+#: src/dialog_options.cpp:244
+msgid "Detection radius :"
+msgstr "Detekční rádius :"
+
+#: src/dialog_options.cpp:260
+msgid "Destination zone style :"
+msgstr "Styl cílové oblasti"
+
+#: src/dialog_options.cpp:262
+msgid "Click here to select preview zone background color :"
+msgstr "Klepněte zde pro výběr barvy pozadí u oblasti náhledu :"
+
+#: src/dialog_options.cpp:266
+msgid "Click here to select preview zone text color :"
+msgstr "Klepněte zde pro výběr barvy textu  u oblasti náhledu :"
+
+#: src/dialog_options.cpp:272
+msgid "Adjust destination zone transparency"
+msgstr "Nastavení průhlednosti cílové oblasti"
+
+#: src/dialog_options.cpp:278
+msgid "Modifier Activation :"
+msgstr ""
+
+#: src/dialog_options.cpp:292
+msgid "Modifier to active Drag'N'Go :"
+msgstr ""
+
+#: src/dialog_options.cpp:299
+msgid "Drag'N'Go"
+msgstr "Drag'N'Go"
+
+#: src/dialog_options.cpp:314
+msgid "Windows 'Active Window Tracking' built-in functionnality :"
+msgstr ""
+
+#: src/dialog_options.cpp:315
+msgid "Any modification here needs at least a session restart to take effect."
+msgstr ""
+
+#: src/dialog_options.cpp:317
+msgid "Enable the Windows 'Active Window Tracking' built-in functionnality."
+msgstr ""
+
+#: src/dialog_options.cpp:322
+msgid "Active Window Tracking will bring the window to the top."
+msgstr ""
+
+#: src/dialog_options.cpp:328
+msgid "Delay before the action of the 'Active Window Tracking' (milliseconds):"
+msgstr ""
+
+#: src/dialog_options.cpp:336
+#, fuzzy
+msgid "Miscellaneous options :"
+msgstr "Ostatní"
+
+#: src/dialog_options.cpp:337
+msgid "Move the mouse pointer to follow the active window."
+msgstr ""
+
+#: src/dialog_options.cpp:342
+msgid "Move the mouse pointer only if it is over the active window's area"
+msgstr ""
+
+#: src/dialog_options.cpp:346
+msgid "Minimize and Maximize hotkeys gives a 'Minimize / Maximize / Restored' state cycle."
+msgstr ""
+
+#: src/dialog_options.cpp:351
+#, fuzzy
+msgid "Misc"
+msgstr "Mozaika"
+
+#: src/dialog_options.cpp:421
+#: src/dialog_options.cpp:610
+msgid "Processing"
+msgstr "Stav"
+
+#: src/dialog_options.cpp:510
+msgid "The two modifiers must be different"
+msgstr ""
+
+#: src/dialog_options.cpp:519
+msgid "The value you entered as 'Detection radius' is "
+msgstr "Vámi zadaná hodnota 'Detekčního rádiusu' je "
+
+#: src/dialog_options.cpp:522
+msgid "too small"
+msgstr "příliš malá"
+
+#: src/dialog_options.cpp:523
+msgid "The minimum value you can enter is '20'."
+msgstr "Minimální hodnota, kterou můžete zadat je '20'."
+
+#: src/dialog_options.cpp:530
+msgid "too big"
+msgstr "příliš veliká"
+
+#: src/dialog_options.cpp:531
+msgid "The maximum value you can enter is '500'."
+msgstr "Maximální hodnota, kterou můžete zadat je '500'."
+
+#: src/dialog_options.cpp:642
+msgid "You have the latest version of WinSplit Revoluton. Always feel free to check out the website fore more informations"
+msgstr "Používáte aktuální verzi programu WinSplit Revolution.Na domovské stránce programu naleznete více informací"
+
+#: src/dialog_options.cpp:651
+msgid "Impossible to retrieve host informations"
+msgstr "Nebylo možné získat hostitelské informace"
+
+#: src/dialog_options.cpp:674
+#: src/dialog_options.cpp:725
+msgid "Export files|*.export|All files|*.*"
+msgstr ""
+
+#: src/dialog_options.cpp:687
+msgid "There was an error while creating the export file !"
+msgstr ""
+
+#: src/dialog_options.cpp:732
+msgid "There was an error while opening the export file !"
+msgstr ""
+
+#: src/dialog_selectsettings.cpp:24
+msgid "Select items to export :"
+msgstr ""
+
+#: src/dialog_selectsettings.cpp:27
+msgid "Select items to import :"
+msgstr ""
+
+#: src/dialog_selectsettings.cpp:30
+msgid "Select items to delete :"
+msgstr ""
+
+#: src/dialog_selectsettings.cpp:38
+msgid "Select all"
+msgstr ""
+
+#: src/dialog_selectsettings.cpp:40
+msgid "Unselect all"
+msgstr ""
+
+#: src/dialog_selectsettings.cpp:42
+msgid "Invert"
+msgstr ""
+
+#: src/dialog_selectsettings.cpp:50
+#: src/dialog_warnhotkeys.cpp:26
+msgid "Ok"
+msgstr "OK"
+
+#: src/dialog_selectsettings.cpp:57
+#, fuzzy
+msgid "General settings"
+msgstr "Nastavení klávesových zkratek"
+
+#: src/dialog_selectsettings.cpp:58
+#, fuzzy
+msgid "Hotkeys settings"
+msgstr "Nastavení klávesových zkratek"
+
+#: src/dialog_selectsettings.cpp:59
+msgid "Layout settings"
+msgstr "Nastavení rozložení"
+
+#: src/dialog_selectsettings.cpp:60
+#, fuzzy
+msgid "Registered placements"
+msgstr "Neregistrovaný proces"
+
+#: src/dialog_warnhotkeys.cpp:27
+msgid "Do not display this message anymore"
+msgstr "Příště již tuto zprávu nezobrazovat"
+
+#: src/dialog_warnhotkeys.cpp:66
+msgid "Hotkeys has been desactivated, date: "
+msgstr "Klávesové zkratky byly vypnuty, datum: "
+
+#: src/fonctions_speciales.cpp:106
+msgid "This classname from process "
+msgstr "Třida klasifikace tohoto procesu"
+
+#: src/fonctions_speciales.cpp:106
+msgid " is not saved."
+msgstr "není uložen."
+
+#: src/fonctions_speciales.cpp:106
+msgid "Save this process at this placement?"
+msgstr "Přejete si uložit proces a jeho umístění?"
+
+#: src/frame_hook.cpp:53
+msgid "Impossible to install hooks"
+msgstr "Klávesy nebylo možné přidat"
+
+#: src/frame_hook.cpp:61
+msgid ""
+"Next WinSplit Revolution run in this loging session will probably cause Drag n'go crash\n"
+"Restart your computer may solve this problem"
+msgstr ""
+"Problémy s funkcí Drag n'go způsobuje pravděpodobně další WinSplit Revolution, který je spuštěn v tomto sezení\n"
+"Problém je možné vyřešit restartem počítače"
+
+#: src/frame_hook.cpp:63
+msgid "Impossible to uninstall some hooks"
+msgstr "Nebylo možné odebrat některé klávesy"
+
+#: src/frame_hook.cpp:132
+msgid "Possibilities scroll to switch"
+msgstr "Pro přepnutí rolujte mezi možnostmi"
+
+#: src/frame_virtualnumpad.cpp:66
+msgid "Keep"
+msgstr "Na vrchu"
+
+#: src/hotkeys_manager.cpp:61
+msgid "Full Screen"
+msgstr "Přes celou obrazovku"
+
+#: src/hotkeys_manager.cpp:85
+msgid "Restore minimized window"
+msgstr "Obnovit minimalizovaná okna"
+
+#: src/main.cpp:33
+msgid "Program already running!"
+msgstr "Program je již spuštěn !"
+
+#: src/main.cpp:40
+msgid ""
+"There were errors during initialization !\n"
+"Winsplit Revolution can't start."
+msgstr ""
+"Nastaly chyby během inicializace !\n"
+"Winsplit Revolution nelze spustit."
+
+#: src/main.cpp:40
+msgid "Errors"
+msgstr "Chyby"
+
+#: src/multimonitor_move.cpp:170
+msgid "Problem to enumerate all screens"
+msgstr "Nastal porblém s vypsáním všech obrazovek"
+
+#: src/multimonitor_move.cpp:177
+msgid "Problem to detect current screen"
+msgstr "Problém s detekcí aktuální obrazovky"
+
+#: src/settingsmanager.cpp:216
+msgid "Language non supported in WinSplit !"
+msgstr "Jazyk není programem podporován !"
+
+#: src/tray_icon.cpp:107
+msgid "Help"
+msgstr "Nápověda"
+
+#: src/tray_icon.cpp:119
+msgid "Launch with Windows"
+msgstr "Spustit při startu Windows"
+
+#: src/tray_icon.cpp:122
+msgid "Exit"
+msgstr "Konec"
+
+#: src/tray_icon.cpp:263
+msgid "Several global hotkeys are already allocated by another program:"
+msgstr "Některé klávesové zkratky jsou již přiděleny jinému programu:"
+
+#: src/tray_icon.cpp:265
+msgid "WinSplit will not invoke them."
+msgstr "WinSplit je nemůže přiřadit."
+
+#: src/tray_icon.cpp:272
+msgid "Hotkeys loading error!"
+msgstr "Chyba načítání klávesových zkratek!"
+
+#: src/dialog_layout.h:30
+msgid "Ratio in per cent"
+msgstr "Poměr v procentech"
+
+#, fuzzy
+#~ msgid "Reset settings"
+#~ msgstr "Nastavení klávesových zkratek"
+
