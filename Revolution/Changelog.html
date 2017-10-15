@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<title>Changelog</title>
+	<meta name="author" content="Xavier Perrissoud (aka Xaviou)">
+	<meta charset="utf-8">
+	<meta name="robots" content="index, follow">
+	<meta name="keywords" content="Winsplit, winsplit revolution, resize, move, windows, window, tiling windows, resolution, screen, monitor">
+	<meta name="description" content="WinSplit Revolution is a small utility which allows you to easily organize your open windows by tiling, resizing and positioning your windows to make the best use of your desktop real estate.">
+	<!-- Feuilles de style -->
+	<link href="/web/20140209150840cs_/http://winsplit-revolution.com/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="/web/20140209150840cs_/http://winsplit-revolution.com/theme/style-main.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="shortcut icon" href="/web/20140209150840im_/http://winsplit-revolution.com/images/favicon.ico">
+</head>
+<body>
+<div class="container main">
+	<div class="page-content">
+		<div class="container-fluid content">
+			<div class="row-fluid">
+				<div class="span12">
+					<h3>Changelog</h3>
+<hr>
+<h4>Next version</h4>
+<ul>
+	<li>Added an option for the VirtualNumpad to be dislayed with big icons (useful for touchscreens)</li>
+	<li>Added 2 buttons to the Virtual Numpad to send the active window to the left/right screen (only available if a multi-monitors display is detected)</li>
+	<li>Added a "Donate" button on the "About" dialog box</li>
+	<li>Bug Fix : Wrong registry key used for the "Active Window Tracking" timeout depending on Windows version</li>
+	<li>Bug Fix : If the Drag'N'Go modifiers were set to "none" + "none", all activated windows were moved to the last target zone used</li>
+	<li>Added 9 new hotkeys ("Win Key" + "Numpad 1 to 9") to simply move the active window (without resizing-it)</li>
+</ul>
+<hr>
+<h4>04/12/2011 - v11.04</h4>
+<ul>
+	<li>Bug Fix : The settings (including the VirtualNumpad position and style) were not saved when WinSplit was closed by the end of the user's session.</li>
+	<li>Improvement : The installer and uninstaller language will now be set automatically, regarding the system's language. The registry keys created by the previous installers has been removed, so the "portable mode" won't touch anything in the registry<br>
+	<b>[Edit] :</b> The dialog box has been put back, because of bad language detection, but the created registry key is removed in case of portable install mode.</li>
+	<li>Bug Fix : The update and/or uninstall process fails because of a dll file that can't be replaced. People will probably still encounter problems to update to this release. If so, there is now a "Cleanup Tool" available in the download page.</li>
+	<li>Bug Fix : The message "<b>Impossible to install hooks</b>" was often shown at WinSplit startup, and the checkbox saying "<b>Do not display this message anymore</b>" wasn't working as expected.</li>
+</ul>
+<hr>
+<h4>03/14/2011 - v11.03</h4>
+<ul>
+	<li>Bug Fix : The VirtualNumpad position was not correctly saved in some cases.</li>
+	<li>Bug Fix : A message was shown (<b>Problem to enumerate all screens</b>) and the "<b>Send to left/right screen</b>" action cancelled if some "invisible mirrored monitors" are installed. Now, only real monitors are taken into account.</li>
+	<li>Bug Fix : When launched at Windows startup, messages for communication between the hook system and the main application could not be delivered "in time", so WinSplit thought that there was a problem and was displaying an error message.</li>
+	<li>New translations : russian</li>
+	<li>Bug Fix : The screenshots folder could not be created under Windows 7 (and probably under windows Vista)</li>
+	<li>New : the errors messages saying that hooks were impossible to install can now be desactivated</li>
+	<li>Bug fix : the automatic update process could not be launched because of UAC : you'll still have to do the next update manually on some system (Windows Vista and 7)</li>
+	<li>Bug fix : the Drag'n'Go functionnality was started even if the corresponding option was unchecked</li>
+</ul>
+<hr>
+<h4>02/18/2011 - v11.02</h4>
+<ul>
+	<li>New functionality : Added the ability to close the application by launching it a second time with the "<b>exit</b>" command line parameter</li>
+	<li>Bug fix : removed a possible error message when showing the "Layout settings" dialog box</li>
+	<li>New functionality : Added a button in the options dialog box to reset the Virtual Numpad's position</li>
+	<li>Major improvement : support for both 32 and 64 bits processes for the "Drag'n'Go" functionnality</li>
+	<li>Bug fix : Registry key related to the "Active Window Tracking" has changed between Windows XP and Vista</li>
+	<li>Bug fix : When Windows Explorer crash (and restart), WinSplit's icon was no more available in the system tray</li>
+	<li>Bug fix : The "Fusion" dialog box don't have the focus when it appears</li>
+	<li>New functionality : the "Fusion" dialog box can now be cancelled (and the corresponding windows retreive their original positions and sizes)</li>
+	<li>New Hotkey for "Always on top" switching</li>
+	<li>New Hotkeys for "Maximize horizontally" and "Maximize Vertically"</li>
+	<li>Bug fix : The last version of WinSplit can't be launched under Windows 2000 due to the missing of the "GetLayeredWindowAttribute" api function.</li>
+</ul>
+<hr>
+<h4>02/27/2009 - v9.02</h4>
+<ul>
+	<li>Bug fix : Drag'n'Go was no more working after registering a window position with the "Automatic placement" feature.</li>
+	<li>Option added to allow the "Minimize" and Maximize" hotkeys cycling between differents states :<ul>
+		<li>Minimize will cycle through "Minimize" =&gt; "Maximize" =&gt; "Restore" =&gt; "Minimize" =&gt; ...</li>
+		<li>Maximize will cycle through "Maximize" =&gt; "Minimize" =&gt; "Restore" =&gt; "Maximize" =&gt; ...</li>
+		<li>If this option isn't enabled (default state), these hotkeys will keep their actual comportment.</li>
+	</ul></li>
+	<li>Option added to allow (or prevent) moving the mouse pointer when moving a Window with hotkeys :<ul>
+		<li>Another option added to allow this only when the mouse pointer is over the active window's area</li>
+		<li>These 2 options will be activated by default</li>
+		<li>The mouse pointer will stay in place when a window is moved with the Virtual Numpad</li>
+	</ul></li>
+	<li>Windows "Active Window Tracking" built-in functionality:<ul>
+		<li>Activation or deactivation of this functionality.</li>
+		<li>Activation or deactivation of the "Auto bring to top" with "Active Window Tracking".</li>
+		<li>Setting the delay value before the "Active Window Tracking" acts.</li>
+	</ul></li>
+	<li>Bug fix : Some windows (like Google Chrome) were not resized but only moved (bug not yet corrected for the "mosaic" function witch needs to be re-implemented)</li>
+	<li>Drag'n'Go activation keys customization</li>
+	<li>Settings importation and exportation</li>
+	<li>Tools for the active window : allow you to set the transparency and/or the "always on top" style of the window, saving a screenshot of this window.</li>
+	<li>New translations available : Czech, Polish, Chinese Traditional, Chinese simplified</li>
+</ul>
+<hr>
+<h4>07/04/2008 - v8.07</h4>
+<ul>
+	<li>Bug fix : "Drag'n'Go" feature problem on Vista 32bits</li>
+	<li>Bug fix : Layout values rounded to integer when the native language does not use the point as a decimal separator</li>
+	<li>Bug fix : A grey window appeared sometimes on the upper left corner of the screen</li>
+	<li>Bug fix : Settings were not written when WinSplit was exited by the end of the Windows session.</li>
+	<li>Bug fix : VirtuaNumpad transparency not correctly managed</li>
+</ul>
+<hr>
+<h4>06/24/2008 - v8.06</h4>
+<ul>
+	<li>Automated Update manager.</li>
+	<li>Drag'n'Go feature added.</li>
+	<li>Layout manager impolemented</li>
+	<li>Several bugs have been fixed.</li>
+</ul>
+<hr>
+<h4>11/20/2007 - v1.9</h4>
+<ul>
+	<li>Minimize/restore window(s) with Ctrl+Alt+Page Down/Up implemented</li>
+	<li>Options dialog has been changed for more effectiveness/simplicity</li>
+	<li>Saving Virtual numpad position when windows (OS) shutdown corrected</li>
+	<li>Moving always on top windows can be taken into account (doesn't work with virtual numpad)</li>
+	<li>Icons in menu appear better</li>
+	<li>Moving tooltips instead of windows corrected</li>
+	<li>xml format used for saving datas</li>
+	<li>Several bugs fixed</li>
+</ul>
+<hr>
+<h4>10/05/2007 - v1.8</h4>
+<ul>
+	<li>Move a window from a screen to another (multimonitor) implemented Ctrl+Alt+ Arrow Left/Right</li>
+	<li>Warmhotkey frame implemented, for hotkeys allocated by other programs</li>
+	<li>Third left clic on the icon tray to hide virtual numpad frame</li>
+	<li>Horizontal fuzion added</li>
+	<li>Several bugs fixed</li>
+</ul>
+<hr>
+<h4>08/28/2007 - v1.7</h4>
+<ul>
+	<li>Auto update detection implemented</li>
+	<li>Added language Catalan</li>
+</ul>
+<hr>
+<h4>08/14/2007 - v1.6</h4>
+<ul>
+	<li>Taking into account multimonitors</li>
+	<li>Added languages German and Spanish</li>
+</ul>
+<hr>
+<h4>03/14/2007 - v1.5</h4>
+<ul>
+	<li>Fixing several bugs</li>
+	<li>Adding global hotkey configurable</li>
+</ul>
+<hr>
+<h4>03/01/2007 - v1.4</h4>
+<ul>
+	<li>Fixing several bugs</li>
+	<li>Multilanguage implemented</li>
+	<li>Ability to have up to 6 windows for a same view</li>
+</ul>
+<hr>
+<h4>10/23/2006 - v1.3</h4>
+<ul>
+	<li>Adding virtual numpad frame</li>
+</ul>
+<hr>
+<h4>10/12/2006 - v1.2</h4>
+<ul>
+	<li>Rewriting some parts of the code for simplicity</li>
+	<li>Adding icons in the tray menu</li>
+	<li>Adding about frame</li>
+	<li>Upgrading fuzion features</li>
+	<li>Deactivate global hotkeys allocated by other programs</li>
+</ul>
+<hr>
+<h4>03/26/2006 - v1.1</h4>
+<ul>
+	<li>Adding Ctrl+Alt+F function for fuzion mode</li>
+</ul>
+<hr>
+<h4>02/25/2006 - v1.09</h4>
+<ul>
+	<li>Only one instance of WinSplit allowed</li>
+	<li>Adding Ctr+Alt+M function for Mosaic mode</li>
+	<li>Adding Ctr+Alt+C function for closing all opened windows</li>
+	<li>Adding Ctr+Alt+Num pad 0 function for auto-positionning applications</li>
+	<li>Avoid resizing non-resizable windows (detected with winamp)</li>
+</ul>
+<hr>
+<h4>02/05/2006 - First release v1.0</h4>
+<ul>
+	<li>Implementation in C/C++ with Code::Bloks and wxWidgets</li>
+	<li>Basic features for move windows</li>
+</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page-footer">
+		<div class="row-fluid">
+			<div class="span12">
+				Copyright © 2008-2012 Winsplit-Revolution - All rights reserved
+			</div>
+		</div>
+	</div>
+</div>
+
+</body></html>
