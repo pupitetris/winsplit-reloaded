@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_workspace_file>
 	<Workspace title="WinSplit Workspace">
-		<Project filename="Hook.cbp" active="1" />
-		<Project filename="WinSplit.cbp">
+		<Project filename="Hook.cbp" />
+		<Project filename="WinSplit.cbp" active="1">
 			<Depends filename="Hook.cbp" />
 		</Project>
 	</Workspace>
