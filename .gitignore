@@ -1,0 +1,4 @@
+/bin/winsplithook.dll
+/bin/winsplithook
+/hook_src/obj/hook_src/*.o
+/hook_src/obj/hook_src/ressource.res
