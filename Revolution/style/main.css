@@ -1,0 +1,86 @@
+.main {
+	background: #ededed;
+	border-radius: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.page-header  {
+	background: #e0e0e0 url(images/logo.png) no-repeat 10px 10px;
+}
+
+.content {
+	background: white;
+	border-radius: 5px;
+	border: 1px solid lightgray;
+	margin: 5px;
+	padding: 15px;
+}
+
+.content li {
+	padding-bottom: 5px;
+}
+
+[class*="span"] {
+ text-align: justify;
+}
+
+[class*="span"].center {
+	text-align: center;
+}
+
+[class*="span"].vcenter {
+	vertical-align: middle;
+}
+
+[class*="span"].top {
+	vertical-align: top;
+}
+
+[class*="span"].right {
+	text-align: right;
+}
+
+[class*="span"].dwnld {
+	padding-top: 10px;
+	text-align: center;
+}
+
+.img-center {
+	text-align: center;
+	font-size: 0.85em;
+	font-style: italic;
+	margin: 5px;
+}
+
+.control-group .checkbox-msg {
+	display: inline-block;
+	margin: 0;
+	padding-left: 3px;
+	padding-top: 2px;
+	vertical-align: middle;
+}
+
+.form-horizontal .control-label {
+	padding-top: 3px;
+	margin-right: 3px;
+}
+
+.control-group.center {
+	text-align: center;
+}
+
+.page-footer {
+	margin: 5px;
+	border-radius: 5px;
+	border: 2px solid lightgray;
+	padding: 5px;
+	background: #e0e0e0;
+	height: 15px;
+}
+
+.page-footer .span12 {
+	text-align: center;
+	color: gray;
+	font-size: 0.9em;
+}
