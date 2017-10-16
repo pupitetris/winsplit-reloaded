@@ -298,16 +298,16 @@ void HotkeyConfigureDialog::InitList()
 	p_listbox->InsertItem(11,_("Windows fusion"));
 	p_listbox->SetItem(11,1,GetIndexStr(11));
 
-	p_listbox->InsertItem(12,_("Close all window"));
+	p_listbox->InsertItem(12,_("Close all windows"));
 	p_listbox->SetItem(12,1,GetIndexStr(12));
 
-	p_listbox->InsertItem(13,_("Move to Left screen"));
+	p_listbox->InsertItem(13,_("Move to left screen"));
 	p_listbox->SetItem(13,1,GetIndexStr(13));
 
-	p_listbox->InsertItem(14,_("Move to Right screen"));
+	p_listbox->InsertItem(14,_("Move to right screen"));
 	p_listbox->SetItem(14,1,GetIndexStr(14));
 
-	p_listbox->InsertItem(15,_("Minimize Window"));
+	p_listbox->InsertItem(15,_("Minimize window"));
 	p_listbox->SetItem(15,1,GetIndexStr(15));
 
 	p_listbox->InsertItem(16,_("Maximize window"));
@@ -316,7 +316,7 @@ void HotkeyConfigureDialog::InitList()
 	p_listbox->InsertItem(17, _("Active window tools"));
 	p_listbox->SetItem(17,1,GetIndexStr(17));
 
-	p_listbox->InsertItem(18, _("Toggle Always on Top"));
+	p_listbox->InsertItem(18, _("Toggle always-on-top"));
 	p_listbox->SetItem(18,1,GetIndexStr(18));
 
 	p_listbox->InsertItem(19, _("Maximize horizontally"));
@@ -324,6 +324,9 @@ void HotkeyConfigureDialog::InitList()
 
 	p_listbox->InsertItem(20, _("Maximize vertically"));
 	p_listbox->SetItem(20,1,GetIndexStr(20));
+
+	p_listbox->InsertItem(21, _("Toggle virtual numpad"));
+	p_listbox->SetItem(21,1,GetIndexStr(21));
 
 	p_listbox->SetItemState(0,wxLIST_STATE_SELECTED,wxLIST_STATE_SELECTED);
 	m_item_selected=0;
@@ -356,7 +359,7 @@ void HotkeyConfigureDialog::OnButActiv(wxCommandEvent &event)
 	{
 		p_listbox->SetItemTextColour(m_item_selected,wxColour(255,0,0));
 		p_listbox->SetItemFont(m_item_selected,*wxITALIC_FONT);
-		vec_tab_tmp[m_item_selected].actif = false;
+		vec_tab_tmp[m_item_selected].active = false;
 		vec_tab_tmp[m_item_selected].session = false;
 		p_btnActiv->SetLabel(_("Enable"));
 
@@ -377,7 +380,7 @@ void HotkeyConfigureDialog::OnButActiv(wxCommandEvent &event)
 
 		p_listbox->SetItemTextColour(m_item_selected,wxColour(0,0,0));
 		p_listbox->SetItemFont(m_item_selected,*wxNORMAL_FONT);
-		vec_tab_tmp[m_item_selected].actif = true;
+		vec_tab_tmp[m_item_selected].active = true;
 		vec_tab_tmp[m_item_selected].session = true;
 		p_btnActiv->SetLabel(_("Disable"));
 
@@ -400,7 +403,7 @@ void HotkeyConfigureDialog::OnTaskChangeSelection(wxListEvent& event)
 void HotkeyConfigureDialog::ShowDialogHK()
 {
 	HotkeyStruct st_hk;
-	if(vec_tab_tmp[m_item_selected].actif)
+	if(vec_tab_tmp[m_item_selected].active)
 	{
 	    dlgChooseHK.SetVecHK(vec_tab_tmp);
 		dlgChooseHK.SetLabel(p_listbox->GetItemText(m_item_selected));

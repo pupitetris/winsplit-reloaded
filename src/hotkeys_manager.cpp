@@ -1,4 +1,3 @@
-
 #include <wx/xml/xml.h>
 
 #include "hotkeys_manager.h"
@@ -7,6 +6,7 @@
 #include "virtual_key_manager.h"
 #include "multimonitor_move.h"
 #include "dialog_activewndtools.h"
+#include "tray_icon.h"
 
 const wxString xml_str[]=
 {
@@ -30,13 +30,14 @@ const wxString xml_str[]=
     _T("ActiveWindowTools"),
     _T("AlwaysOnTop"),
     _T("MaximizeHorizontally"),
-    _T("MaximizeVertically")
+    _T("MaximizeVertically"),
+    _T("ToggleVirtualNumpad")
 };
 
-HotkeysManager::HotkeysManager()
-:wxFrame(NULL,-1,wxEmptyString),
-m_minimizeRestore(),
-m_options(SettingsManager::Get())
+#define NUM_HOTKEYS 22
+
+HotkeysManager::HotkeysManager(TrayIcon *tray)
+:wxFrame(NULL,-1,wxEmptyString),m_options(SettingsManager::Get()),m_minimizeRestore(),p_tray(tray)
 {
     SetDefaultData();
 }
@@ -95,9 +96,11 @@ wxString HotkeysManager::Start()
 
     str_in[20]=_("Maximize Vertically");
 
-    for (unsigned int i=0; i<vec_hotkey.size(); ++i)
+    str_in[21]=_("Toggle Virtual Numpad");
+
+    for (unsigned int i = 0; i < vec_hotkey.size(); ++i)
     {
-        if (vec_hotkey[i].session = vec_hotkey[i].actif)
+        if (vec_hotkey[i].session = vec_hotkey[i].active)
         {
             vec_hotkey[i].session = ::RegisterHotKey((HWND)GetHandle(),HK_0+i,vec_hotkey[i].modifier1|vec_hotkey[i].modifier2,vec_hotkey[i].virtualKey);
             if (!vec_hotkey[i].session)
@@ -122,37 +125,39 @@ bool HotkeysManager::Stop()
 
 void HotkeysManager::SetDefaultData()
 {
-    // Resize au nombre de HK qu'utilise winsplit
-    vec_hotkey.resize(21);
+    // Resize to the number of Hot Keys that winsplit uses
+    vec_hotkey.resize(NUM_HOTKEYS);
 
-    for (unsigned int i = 0; i< vec_hotkey.size(); ++i)
+    for (unsigned int i = 0; i < vec_hotkey.size(); ++i)
     {
         vec_hotkey[i].modifier1 = MOD_CONTROL;
         vec_hotkey[i].modifier2 = MOD_ALT;
-        vec_hotkey[i].actif = true;
+        vec_hotkey[i].active = true;
     }
-    // Valeurs des Hotkeys par défaut
-    vec_hotkey[0].virtualKey = 0x60;    // Alt + Ctrl + NumPad 0 = Auto Placement
-    vec_hotkey[1].virtualKey = 0x61;    // Alt + Ctrl + NumPad 1 = Bottom Left
-    vec_hotkey[2].virtualKey = 0x62;    // Alt + Ctrl + NumPad 2 = Bottom
-    vec_hotkey[3].virtualKey = 0x63;    // Alt + Ctrl + NumPad 3 = Bottom Right
-    vec_hotkey[4].virtualKey = 0x64;    // Alt + Ctrl + NumPad 4 = Left
-    vec_hotkey[5].virtualKey = 0x65;    // Alt + Ctrl + NumPad 5 = Center
-    vec_hotkey[6].virtualKey = 0x66;    // Alt + Ctrl + NumPad 6 = Right
-    vec_hotkey[7].virtualKey = 0x67;    // Alt + Ctrl + NumPad 7 = Up Left
-    vec_hotkey[8].virtualKey = 0x68;    // Alt + Ctrl + NumPad 8 = Up
-    vec_hotkey[9].virtualKey = 0x69;    // Alt + Ctrl + NumPad 9 = Up Right
+
+    // Default Hot key values
+    vec_hotkey[0].virtualKey = 0x60;    // Alt + Ctrl + Numpad 0 = Auto Placement
+    vec_hotkey[1].virtualKey = 0x61;    // Alt + Ctrl + Numpad 1 = Bottom Left
+    vec_hotkey[2].virtualKey = 0x62;    // Alt + Ctrl + Numpad 2 = Bottom
+    vec_hotkey[3].virtualKey = 0x63;    // Alt + Ctrl + Numpad 3 = Bottom Right
+    vec_hotkey[4].virtualKey = 0x64;    // Alt + Ctrl + Numpad 4 = Left
+    vec_hotkey[5].virtualKey = 0x65;    // Alt + Ctrl + Numpad 5 = Center
+    vec_hotkey[6].virtualKey = 0x66;    // Alt + Ctrl + Numpad 6 = Right
+    vec_hotkey[7].virtualKey = 0x67;    // Alt + Ctrl + Numpad 7 = Up Left
+    vec_hotkey[8].virtualKey = 0x68;    // Alt + Ctrl + Numpad 8 = Up
+    vec_hotkey[9].virtualKey = 0x69;    // Alt + Ctrl + Numpad 9 = Up Right
     vec_hotkey[10].virtualKey = 0x4D;   // Alt + Ctrl + M = Mosaic
     vec_hotkey[11].virtualKey = 0x46;   // Alt + Ctrl + F = Windows Fusion
     vec_hotkey[12].virtualKey = 0x43;   // Alt + Ctrl + C = Close All Windows
     vec_hotkey[13].virtualKey = 0x25;   // Alt + Ctrl + Left = Window to Left Screen
     vec_hotkey[14].virtualKey = 0x27;   // Alt + Ctrl + Right = Window to Right Screen
-    vec_hotkey[15].virtualKey = 0x22;   // Alt + Ctrl + Pg Dwn = Minimize Window
+    vec_hotkey[15].virtualKey = 0x22;   // Alt + Ctrl + Pg Down = Minimize Window
     vec_hotkey[16].virtualKey = 0x21;   // Alt + Ctrl + Pg Up = Restore Minimized Windows
     vec_hotkey[17].virtualKey = 0x54;   // Alt + Ctrl + T = Active Window Tools
     vec_hotkey[18].virtualKey = 0x4F;   // Alt + Ctrl + O = Toggle "Always on Top"
-    vec_hotkey[19].virtualKey = 0x48;   // Alt + Ctrl + H = Maximize Horiz.
-    vec_hotkey[20].virtualKey = 0x56;   // Alt + Ctrl + V = Maximize Vertic.
+    vec_hotkey[19].virtualKey = 0x48;   // Alt + Ctrl + H = Maximize Horizontally.
+    vec_hotkey[20].virtualKey = 0x56;   // Alt + Ctrl + V = Maximize Vertically.
+    vec_hotkey[21].virtualKey = 0x4E;   // Alt + Ctrl + N = Toggle Virtual Numpad
 }
 
 void HotkeysManager::SetVecHotkey(const std::vector<HotkeyStruct>& vec)
@@ -168,7 +173,7 @@ std::vector<HotkeyStruct> HotkeysManager::GetCpyVector()
 
 int HotkeysManager::GetTaskIndex(wxString name)
 {
-    for(unsigned int i=0; i<vec_hotkey.size(); ++i)
+    for(unsigned int i = 0; i < vec_hotkey.size(); ++i)
     {
         if (name == xml_str[i])
             return i;
@@ -218,7 +223,7 @@ bool HotkeysManager::LoadData()
 
         properties = properties->GetNext();
         value = properties->GetValue();
-        vec_hotkey[i].actif = value.Cmp(_T("True"))==0;
+        vec_hotkey[i].active = value.Cmp(_T("True"))==0;
 
         child = child->GetNext();
     }
@@ -255,7 +260,7 @@ bool HotkeysManager::SaveData()
         properties = properties->GetNext();
         properties->SetNext(new wxXmlProperty(_T("VirtualHotkey"),wxString::Format(_T("%d"),vec_hotkey[i].virtualKey)));
         properties = properties->GetNext();
-        properties->SetNext(new wxXmlProperty(_T("Activate"),vec_hotkey[i].actif?_T("True"):_T("False")));
+        properties->SetNext(new wxXmlProperty(_T("Activate"),vec_hotkey[i].active?_T("True"):_T("False")));
     }
 
     doc.Save(path.c_str());
@@ -336,7 +341,8 @@ WXLRESULT HotkeysManager::MSWWindowProc(WXUINT nMsg, WXWPARAM wParam, WXLPARAM l
         case HK_VMAXIMIZE:
             m_minimizeRestore.MaximizeVertically();
             break;
-        default:
+        case HK_TOGGLEVNUMPAD:
+            p_tray->ShowOrHideVirtualNumpad();
             break;
         }
     }

@@ -48,7 +48,7 @@ TrayIcon::TrayIcon() : m_options(SettingsManager::Get())
     ReadRegisterAutoStart();
     SetIcon(wxIcon(icone_xpm),_T("WinSplit Revolution ")+wxGetApp().GetVersion());
 
-    p_hotkeys = new HotkeysManager();
+    p_hotkeys = new HotkeysManager(this);
     p_virtNumpad = new VirtualNumpad();
 
     p_updateThread = NULL;
@@ -286,6 +286,11 @@ void TrayIcon::SetHotkeys()
 void TrayIcon::OnLeftClick(wxTaskBarIconEvent &event)
 {
     p_virtNumpad->CycleShownReduced();
+}
+
+void TrayIcon::ShowOrHideVirtualNumpad ()
+{
+    p_virtNumpad->Show (!p_virtNumpad->IsShown ());
 }
 
 void TrayIcon::OnTimer(wxTimerEvent& event)

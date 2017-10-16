@@ -60,6 +60,7 @@ public:
     void ReadRegisterAutoStart();
     void WriteRegisterAutoStart(bool start_with_windows);
     void SetHotkeys();
+    void ShowOrHideVirtualNumpad ();
     void OnLeftClick(wxTaskBarIconEvent &event);
     void SaveOnExit();
     void ShowIcon();
