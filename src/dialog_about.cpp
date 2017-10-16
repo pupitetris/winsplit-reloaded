@@ -6,7 +6,6 @@
 
 #include "../images/builtwithwx.xpm"
 #include "../images/icone.xpm"
-//#include "../images/creative_commons.xpm"
 #include "../images/gplv3.xpm"
 
 BEGIN_EVENT_TABLE(AboutDialog, wxDialog)
@@ -19,7 +18,7 @@ END_EVENT_TABLE()
 AboutDialog::AboutDialog(wxWindow* parent,wxWindowID id,const wxString& title,const wxPoint& pos,const wxSize& size,long style)
 :wxDialog(parent,id,title,pos,size,style)
 {
-    wxString dlg_title(_("About WinSplit Revolution"));
+    wxString dlg_title(_("About WinSplit Reloaded"));
 
     dlg_title += _T(" v") + wxGetApp().GetVersion();
 
@@ -44,13 +43,13 @@ void AboutDialog::CreateControls()
 
     SetSizer(pmainSizer);
 
-    wxTextCtrl* ptxtAbout = new wxTextCtrl(this,ID_TEXTABOUT,wxEmptyString,wxDefaultPosition,wxSize(370,185),
+    wxTextCtrl* ptxtAbout = new wxTextCtrl(this,ID_TEXTABOUT,wxEmptyString,wxDefaultPosition,wxSize(370,260),
                             wxTE_READONLY|wxTE_AUTO_URL|wxTE_MULTILINE|wxTE_CENTRE|
                             wxSTATIC_BORDER|wxTE_RICH2);
 
     wxTextAttr attr_tmp=ptxtAbout->GetDefaultStyle();
     ptxtAbout->SetDefaultStyle(wxTextAttr(*wxBLACK,wxNullColour,wxFont(10,wxDEFAULT,wxFONTSTYLE_NORMAL,wxBOLD)));
-    *ptxtAbout << _T("WINSPLIT REVOLUTION")<< _T("\n");;
+    *ptxtAbout << _T("WINSPLIT RELOADED")<< _T("\n");;
     ptxtAbout->SetDefaultStyle(attr_tmp);
 	*ptxtAbout << _T("Copyright (C) 2005-2009") << _T("\n");
     *ptxtAbout << _("Created by Raphael Lencrerot") << _T("\n\n");
@@ -66,12 +65,10 @@ void AboutDialog::CreateControls()
 	*ptxtAbout << _("WinSplit Revolution Team:") << _T("\n");
 	*ptxtAbout << _T("Raphael Lencrerot (developper)") << _T("\n");
 	*ptxtAbout << _T("Xavier Perrissoud (developper)") << _T("\n");
+	*ptxtAbout << _T("Arturo Espinosa (developper)") << _T("\n\n");
 
 	*ptxtAbout << _T("Special thanks to NX (icons design)");
 	ptxtAbout->SetInsertionPoint(0);
-    /*ptxtAbout->SetDefaultStyle(wxTextAttr(*wxRED));
-    *ptxtAbout << _("Some Rights Reserved");
-    ptxtAbout->SetInsertionPoint(0);*/
 
     wxBitmap bitmapwx(builtwithwx_xpm);
     wxBitmap bitmapcc(gplv3_xpm);
