@@ -3,16 +3,17 @@
 
 #include <wx/wx.h>
 #include <wx/xml/xml.h>
-#include <wx/filefn.h>#include <vector>
+#include <wx/filefn.h>
+#include <vector>
 #include <windows.h>
 #include "settingsmanager.h"
 
 struct RatioRect
 {
-    double x;
-    double y;
-    double width;
-    double height;
+	double x;
+	double y;
+	double width;
+	double height;
 };
 
 
@@ -36,11 +37,11 @@ public:
 	void SaveData();
 	void SetDefault();
 
-	void CopyTable(std::vector<std::vector<RatioRect> >& destination);
-	void SetTable(const std::vector<std::vector<RatioRect> >& source);
+	void CopyTable (std::vector<std::vector<RatioRect> >& destination);
+	void SetTable (const std::vector<std::vector<RatioRect> >& source);
 
-	wxRect GetNext(HWND hwnd,int sequence);
-	bool GetNearestFromCursor(std::vector<wxRect>& result);
+	wxRect GetNext (HWND hwnd, int sequence);
+	bool GetNearestFromCursor (std::vector<wxRect>& result);
 };
 
 

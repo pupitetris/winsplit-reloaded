@@ -9,38 +9,38 @@
 #include "hotkeys_manager.h"
 #include "virtual_key_manager.h"
 
-class ChooseHotkeyDialog:public wxDialog
+class ChooseHotkeyDialog: public wxDialog
 {
 private:
-    wxComboBox* p_cmbMod1;
-    wxComboBox* p_cmbMod2;
-    wxComboBox* p_cmbVirtKey;
-    wxButton* p_btnOk;
-    wxButton* p_btnCancel;
-    std::vector<HotkeyStruct> vec_hk;
-    int n_item;
-    VirtualModifierManager m_mod_manager;
+	wxComboBox* p_cmbMod1;
+	wxComboBox* p_cmbMod2;
+	wxComboBox* p_cmbVirtKey;
+	wxButton* p_btnOk;
+	wxButton* p_btnCancel;
+	std::vector<HotkeyStruct> vec_hk;
+	int n_item;
+	VirtualModifierManager m_mod_manager;
 	VirtualKeyManager m_keys_manager;
 
 public:
 
-    ChooseHotkeyDialog(wxWindow* parent,
-                        wxWindowID id = wxID_ANY,
-                        const wxString& title = wxEmptyString);
+	ChooseHotkeyDialog (wxWindow* parent,
+	                    wxWindowID id = wxID_ANY,
+	                    const wxString& title = wxEmptyString);
 
-    ~ChooseHotkeyDialog();
+	~ChooseHotkeyDialog();
 
-    void set_hotkeys(unsigned int modifier_1,unsigned int modifier_2,unsigned int virtual_key);
-    HotkeyStruct GetHotkeys();
-    void InitCombo();
-    void CreateControls();
-    void SetHotkeys(HotkeyStruct hk,int num_item);
-    void OnButOk(wxCommandEvent &event);
-    void SetVecHK(const std::vector<HotkeyStruct>& vec);
+	void set_hotkeys (unsigned int modifier_1, unsigned int modifier_2, unsigned int virtual_key);
+	HotkeyStruct GetHotkeys();
+	void InitCombo();
+	void CreateControls();
+	void SetHotkeys (HotkeyStruct hk, int num_item);
+	void OnButOk (wxCommandEvent &event);
+	void SetVecHK (const std::vector<HotkeyStruct>& vec);
 };
 
 
-class HotkeyConfigureDialog:public wxDialog
+class HotkeyConfigureDialog: public wxDialog
 {
 private:
 	wxListCtrl* p_listbox;
@@ -58,25 +58,25 @@ private:
 	VirtualModifierManager m_mod_manager;
 	VirtualKeyManager m_keys_manager;
 
-	void OnButEdit(wxCommandEvent &event);
-    void OnButActiv(wxCommandEvent &event);
-    void OnTaskChangeSelection(wxListEvent& event);
-    void OnTaskDoubleClick(wxListEvent& event);
-    void InitList();
-    void CreateControls();
-    void CreateConnexions();
-    void ShowDialogHK();
+	void OnButEdit (wxCommandEvent &event);
+	void OnButActiv (wxCommandEvent &event);
+	void OnTaskChangeSelection (wxListEvent& event);
+	void OnTaskDoubleClick (wxListEvent& event);
+	void InitList();
+	void CreateControls();
+	void CreateConnexions();
+	void ShowDialogHK();
 
-    int GetIndexVal(int* tab,int size,int val);
-    wxString GetIndexStr(int val);
-    void SetRegisterHK(HotkeysManager *p);
+	int GetIndexVal (int* tab, int size, int val);
+	wxString GetIndexStr (int val);
+	void SetRegisterHK (HotkeysManager *p);
 
 public:
-	HotkeyConfigureDialog(HotkeysManager*);
-    ~HotkeyConfigureDialog();
+	HotkeyConfigureDialog (HotkeysManager*);
+	~HotkeyConfigureDialog();
 
-    std::vector<HotkeyStruct> GetVecTmpHK();
-    bool IsModified();
+	std::vector<HotkeyStruct> GetVecTmpHK();
+	bool IsModified();
 
 };
 

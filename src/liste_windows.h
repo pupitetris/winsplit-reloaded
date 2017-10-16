@@ -9,9 +9,9 @@ class ListWindows
 private:
 
 public:
-    ListWindows(){}
-    static bool ValidateWindow(HWND hwnd,bool accept_tmw=true);
-    static HWND ListWindow();
+	ListWindows() {}
+	static bool ValidateWindow (HWND hwnd, bool accept_tmw = true);
+	static HWND ListWindow();
 };
 
 

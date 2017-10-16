@@ -9,7 +9,7 @@
 #include "lmpreview.h"
 #include "layout_manager.h"
 
-class ChooseRatioDialog:public wxDialog
+class ChooseRatioDialog: public wxDialog
 {
 private:
 	wxTextCtrl* p_txtCtrlX;
@@ -21,28 +21,28 @@ private:
 	wxButton* p_btnCancel;
 
 	void CreateControls();
-	void CheckValidity(wxCommandEvent& event);
+	void CheckValidity (wxCommandEvent& event);
 
 public:
 
-	ChooseRatioDialog(wxWindow* parent = NULL,
-				wxWindowID id = wxID_ANY,
-				const wxString& title = _("Ratio in per cent"));
+	ChooseRatioDialog (wxWindow* parent = NULL,
+	                   wxWindowID id = wxID_ANY,
+	                   const wxString& title = _ ("Ratio in per cent") );
 
 	~ChooseRatioDialog();
 
 	bool IsValide();
 	bool IsInside();
 
-	void SetRatio(RatioRect ratio);
+	void SetRatio (RatioRect ratio);
 	RatioRect GetRatio();
 };
 
 
-class LayoutDialog:public wxDialog
+class LayoutDialog: public wxDialog
 {
 private:
-    std::vector<std::vector<RatioRect> > tab_seq_tmp;
+	std::vector<std::vector<RatioRect> > tab_seq_tmp;
 	wxListCtrl* p_lstCtrlTask;
 	wxListCtrl* p_lstCtrlCombo;
 	wxButton* p_btnAdd;
@@ -69,23 +69,23 @@ private:
 	void CreateConnections();
 	void InitListCtrl();
 
-	void RefreshLstCtrlCombo(bool select_first = true);
-	void OnTaskChangeSelection(wxListEvent& event);
-	void OnComboChangeSelection(wxListEvent& event);
-	void OnActiveCombo(wxListEvent& event);
-	void OnAddCombo(wxCommandEvent& event);
-	void OnEditCombo(wxCommandEvent& event);
-	void OnDeleteCombo(wxCommandEvent& event);
-	void OnSpinUp(wxSpinEvent& event);
-	void OnSpinDown(wxSpinEvent& event);
-	void OnOKBtn(wxCommandEvent& event);
+	void RefreshLstCtrlCombo (bool select_first = true);
+	void OnTaskChangeSelection (wxListEvent& event);
+	void OnComboChangeSelection (wxListEvent& event);
+	void OnActiveCombo (wxListEvent& event);
+	void OnAddCombo (wxCommandEvent& event);
+	void OnEditCombo (wxCommandEvent& event);
+	void OnDeleteCombo (wxCommandEvent& event);
+	void OnSpinUp (wxSpinEvent& event);
+	void OnSpinDown (wxSpinEvent& event);
+	void OnOKBtn (wxCommandEvent& event);
 
-	void OnPaint(wxPaintEvent &event);
+	void OnPaint (wxPaintEvent &event);
 
 public:
-	LayoutDialog(wxWindow* parent = NULL,
-				wxWindowID id = wxID_ANY,
-				const wxString& title = _("Layout settings"));
+	LayoutDialog (wxWindow* parent = NULL,
+	              wxWindowID id = wxID_ANY,
+	              const wxString& title = _ ("Layout settings") );
 
 	~LayoutDialog();
 };

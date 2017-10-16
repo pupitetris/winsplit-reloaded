@@ -17,21 +17,21 @@
 
 class SelectSettingsDialog : public wxDialog
 {
-    public:
-        SelectSettingsDialog(wxWindow* parent, int type);
-        virtual ~SelectSettingsDialog();
-        void SetSelectionFlags(int flags=SST_ALL);
-        int GetSelectionFlags() const;
-    protected:
-    private:
-		int m_iDialogType;
-        void CreateControls();
-        void ConnectControls();
-        SettingsManager &m_options;
-        wxCheckListBox *p_lstChoices;
-        wxButton *p_btnSelectAll, *p_btnUnselectAll, *p_btnInvert;
-        wxButton *p_btnOk, *p_btnCancel;
-        void OnChangeSelection(wxCommandEvent &event);
+public:
+	SelectSettingsDialog (wxWindow* parent, int type);
+	virtual ~SelectSettingsDialog();
+	void SetSelectionFlags (int flags = SST_ALL);
+	int GetSelectionFlags() const;
+protected:
+private:
+	int m_iDialogType;
+	void CreateControls();
+	void ConnectControls();
+	SettingsManager &m_options;
+	wxCheckListBox *p_lstChoices;
+	wxButton *p_btnSelectAll, *p_btnUnselectAll, *p_btnInvert;
+	wxButton *p_btnOk, *p_btnCancel;
+	void OnChangeSelection (wxCommandEvent &event);
 };
 
 #endif // SELECTSETTINGSDIALOG_H_INCLUDED

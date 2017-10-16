@@ -8,23 +8,23 @@
 
 struct WindowMinimized
 {
-    HWND hwnd;
-    WINDOWPLACEMENT placement;
+	HWND hwnd;
+	WINDOWPLACEMENT placement;
 };
 
 class MinimizeRestore
 {
 private:
-    std::stack<WindowMinimized> m_vecMinimized;
+	std::stack<WindowMinimized> m_vecMinimized;
 public:
-    MinimizeRestore(){}
+	MinimizeRestore() {}
 
-    ~MinimizeRestore(){}
+	~MinimizeRestore() {}
 
-    void MiniMizeWindow();
-    void RestoreMiniMizedWindow();
-    void MaximizeHorizontally();
-    void MaximizeVertically();
+	void MiniMizeWindow();
+	void RestoreMiniMizedWindow();
+	void MaximizeHorizontally();
+	void MaximizeVertically();
 };
 
 
