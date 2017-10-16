@@ -58,7 +58,7 @@ TrayIcon::TrayIcon() : m_options(SettingsManager::Get())
     if (m_options.getSaveNumpadPosOnExit())
     {
         p_virtNumpad->SetPosition(m_options.getNumpadPosition());
-        p_virtNumpad->SetStyleReduced(m_options.getNumpadStyle());
+        p_virtNumpad->SetReduced(m_options.getNumpadStyle());
         p_virtNumpad->SetCheckValue(!m_options.getNumpadAutoHide());
         p_virtNumpad->SetTransparancy(m_options.getNumpadTransparency());
     }
@@ -285,21 +285,7 @@ void TrayIcon::SetHotkeys()
 // This is a tri-state toggle.
 void TrayIcon::OnLeftClick(wxTaskBarIconEvent &event)
 {
-    if (!p_virtNumpad->IsShown()) // First state: not shown.
-    {
-        p_virtNumpad->SetStyleReduced(true);
-        p_virtNumpad->Show();
-        return;
-    }
-
-    if (p_virtNumpad->IsReduced()) // Second state: reduced.
-    {
-        p_virtNumpad->SetStyleReduced(false);
-        return;
-    }
-
-    // Remaining third state: reduced.
-    p_virtNumpad->Show(false);
+    p_virtNumpad->CycleShownReduced();
 }
 
 void TrayIcon::OnTimer(wxTimerEvent& event)

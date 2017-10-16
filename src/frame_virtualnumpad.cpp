@@ -91,9 +91,11 @@ VirtualNumpad::~VirtualNumpad()
 }
 
 
-void VirtualNumpad::SetFlag(bool reduced)
+void VirtualNumpad::SetReduced(bool reduced)
 {
     m_reducedStyle = reduced;
+
+    SetStyleReduced (reduced);
 }
 
 
@@ -124,32 +126,47 @@ void VirtualNumpad::SetTransparancy(int value)
 void VirtualNumpad::SetStyleReduced(bool reduce)
 {
     p_checkStay->Show(!reduce);
-    long style;
 
-    if (reduce)
-        style=wxSTAY_ON_TOP|wxFRAME_TOOL_WINDOW;
-    else
-        style=wxCAPTION|wxSYSTEM_MENU|wxSTAY_ON_TOP|wxCLOSE_BOX|wxFRAME_TOOL_WINDOW;
-
+    long style = wxSTAY_ON_TOP | wxFRAME_TOOL_WINDOW;
 	if(reduce)
 	{
 		m_frame_pos = GetPosition();
 		wxPoint tmp = p_sizer->GetContainingWindow()->GetPosition();
 
-        // Correction suite à un decallage.
+        // Correction for a shift in the result.
 		--tmp.x;
 		--tmp.y;
 
 		Move(ClientToScreen(tmp));
 	}
 	else
+    {
+        style |= wxCAPTION | wxSYSTEM_MENU | wxCLOSE_BOX;
 		Move(m_frame_pos);
+    }
 
     SetWindowStyleFlag(style);
 
     p_sizer->SetSizeHints(this);
+}
 
-    m_reducedStyle = reduce;
+void VirtualNumpad::CycleShownReduced()
+{
+    if (!IsShown()) // First state: not shown.
+    {
+        SetReduced(true);
+        Show();
+        return;
+    }
+
+    if (IsReduced()) // Second state: reduced.
+    {
+        SetReduced(false);
+        return;
+    }
+
+    // Remaining third state: reduced.
+    Show(false);
 }
 
 void VirtualNumpad::SetCheckValue(bool checked)

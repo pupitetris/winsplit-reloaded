@@ -31,6 +31,9 @@ private:
     void OnClicEvent(wxCommandEvent& event);
     void OnCLose(wxCloseEvent& event);
 
+    void FitFrame();
+    void SetStyleReduced(bool flag);
+
 public:
     VirtualNumpad(wxWindow* parent = NULL,
               wxWindowID id = wxID_ANY,
@@ -41,12 +44,11 @@ public:
 
     ~VirtualNumpad();
 
-    void SetFlag(bool b);
+    void SetReduced(bool b);
     bool IsReduced();
-    void FitFrame();
+    void CycleShownReduced ();
 
     void SetTransparancy(int val);
-    void SetStyleReduced(bool flag);
     void SetCheckValue(bool b);
     bool GetCheckValue();
     wxPoint GetNotReducedPosition();
