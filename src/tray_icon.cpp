@@ -60,7 +60,7 @@ TrayIcon::TrayIcon() : m_options(SettingsManager::Get())
         p_virtNumpad->SetPosition(m_options.getNumpadPosition());
         p_virtNumpad->SetReduced(m_options.getNumpadStyle());
         p_virtNumpad->SetCheckValue(!m_options.getNumpadAutoHide());
-        p_virtNumpad->SetTransparancy(m_options.getNumpadTransparency());
+        p_virtNumpad->SetTransparency(m_options.getNumpadTransparency());
     }
 
     if (m_options.getShowNumpadAtBoot())

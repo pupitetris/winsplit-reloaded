@@ -47,7 +47,7 @@ public:
     bool IsReduced();
     void CycleShownReduced ();
 
-    void SetTransparancy(int val);
+    void SetTransparency(int val);
     void SetCheckValue(bool b);
     bool GetCheckValue();
     wxPoint GetNotReducedPosition();

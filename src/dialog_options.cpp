@@ -161,7 +161,7 @@ void OptionsDialog::CreateAndFillPage_Numpad(wxNotebook *book)
 
     wxPanel *pnlNumpad=new wxPanel(p_nBook,-1);
     pageszr=new wxBoxSizer(wxVERTICAL);
-		// Première zone : les options
+		// First zone: options
 		stbszr=new wxStaticBoxSizer(wxVERTICAL,pnlNumpad,_("Virtual numpad options"));
 			p_checkSaveVirtNumpad = new wxCheckBox(pnlNumpad,-1,_("Save Virtual numpad state when exit"));
 			p_checkSaveVirtNumpad->SetValue(m_options.getSaveNumpadPosOnExit());
@@ -173,15 +173,16 @@ void OptionsDialog::CreateAndFillPage_Numpad(wxNotebook *book)
 			p_checkAutoHide->SetValue(m_options.getNumpadAutoHide());
 			stbszr->Add(p_checkAutoHide,0,wxALL|wxEXPAND,5);
 		pageszr->Add(stbszr,0,wxALL|wxEXPAND,5);
-		// Deuxième zone : le style (la transparence)
+		// Second zone: styling (transparency)
 		stbszr=new wxStaticBoxSizer(wxVERTICAL,pnlNumpad,_("Virtual numpad style"));
 			stbszr->Add(new wxStaticText(pnlNumpad,-1,_("Adjust Virtual numpad transparency")),0,wxALL|wxALIGN_CENTER_HORIZONTAL,5);
-			p_sliderNumpadTransparency = new wxSlider(pnlNumpad,-1,50,0,100,wxDefaultPosition,wxSize(250,-1),wxSL_HORIZONTAL|wxSL_LABELS);
+			p_sliderNumpadTransparency = new wxSlider(pnlNumpad,-1,50,0,100,wxDefaultPosition,wxSize(250,-1),wxSL_HORIZONTAL|wxSL_LABELS|wxSL_AUTOTICKS);
+			p_sliderNumpadTransparency->SetTickFreq(10, 20);
 			p_sliderNumpadTransparency->SetValue(m_options.getNumpadTransparency());
 			stbszr->Add(p_sliderNumpadTransparency,0,wxALL|wxEXPAND,5);
 		pageszr->Add(stbszr,0,wxALL|wxEXPAND,5);
 	pnlNumpad->SetSizer(pageszr);
-    p_nBook->AddPage(pnlNumpad,_("Virtual numpad"));
+	p_nBook->AddPage(pnlNumpad,_("Virtual numpad"));
 }
 
 void OptionsDialog::CreateAndFillPage_WebUpdate(wxNotebook *book)
@@ -452,7 +453,7 @@ void OptionsDialog::OnSomethingHasChanged(wxCommandEvent &event)
     else if (id==p_sliderNumpadTransparency->GetId())
     {
         if (p_virtNumpad!=NULL)
-            p_virtNumpad->SetTransparancy(p_sliderNumpadTransparency->GetValue());
+            p_virtNumpad->SetTransparency(p_sliderNumpadTransparency->GetValue());
     }
     else if (id==p_checkUpdate->GetId())
     {
@@ -548,7 +549,7 @@ bool OptionsDialog::ApplyChanges()
     m_options.setNumpadAutoHide(p_checkAutoHide->GetValue());
     p_virtNumpad->SetCheckValue(!p_checkAutoHide->GetValue());
     m_options.setNumpadTransparency(p_sliderNumpadTransparency->GetValue());
-    p_virtNumpad->SetTransparancy(p_sliderNumpadTransparency->GetValue());
+    p_virtNumpad->SetTransparency(p_sliderNumpadTransparency->GetValue());
     // Onglet "Web update"
     m_options.setCheckForUpdates(p_checkUpdate->GetValue());
     m_options.setUpdateCheckFrequency(p_cmbUpdate->GetSelection()+1);

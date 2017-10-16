@@ -118,9 +118,9 @@ void VirtualNumpad::OnClicEvent(wxCommandEvent& event)
         Show(false);
 }
 
-void VirtualNumpad::SetTransparancy(int value)
+void VirtualNumpad::SetTransparency(int value)
 {
-    SetTransparent((255*value)/100);
+    SetTransparent(255 - (255*value)/100);
 }
 
 void VirtualNumpad::SetStyleReduced(bool reduce)
