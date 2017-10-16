@@ -21,10 +21,10 @@ ActiveWndToolsDialog::ActiveWndToolsDialog (wxWindow* parent, HWND activeWindow)
 	m_sTmpFName.AppendDir (_T ("screenshots") );
 	if (!m_sTmpFName.DirExists() )
 		m_sTmpFName.Mkdir (0777, wxPATH_MKDIR_FULL);
-	// On regarde si la fenêtre a déjà le style ALWAYS_ON_TOP ou pas
+	// On regarde si la fenÃªtre a dÃ©jÃ  le style ALWAYS_ON_TOP ou pas
 	long lStyle =::GetWindowLong (m_hActiveWindow, GWL_EXSTYLE);
 	m_bIsAlwaysOnTop = ( (lStyle & WS_EX_TOPMOST) == WS_EX_TOPMOST);
-	// On récupère le degré de transparence actuel (si possible)
+	// On rÃ©cupÃ¨re le degrÃ© de transparence actuel (si possible)
 	GetTransparencyValues (m_hActiveWindow, m_bIsTransparent, m_iTranparency);
 
 	GetScreenShots();
@@ -73,13 +73,13 @@ void ActiveWndToolsDialog::CreateControls()
 		tmpBmp = wxBitmap (tmpImg.Scale (int (rY * wdth), 200) );
 	}
 
-	wxStaticText *label; // Utilisé pour la création de tous les wxStaticText
+	wxStaticText *label; // UtilisÃ© pour la crÃ©ation de tous les wxStaticText
 
-	// Le wxSizer principal de la fenêtre
+	// Le wxSizer principal de la fenÃªtre
 	wxBoxSizer *mainsizer = new wxBoxSizer (wxVERTICAL);
-	// Le wxSizer correspondant au premier "bloc" de contrôles" (changement du style de la fenêtre)
+	// Le wxSizer correspondant au premier "bloc" de contrÃ´les" (changement du style de la fenÃªtre)
 	wxStaticBoxSizer *box1 = new wxStaticBoxSizer (wxVERTICAL, this, _ ("Window style : ") );
-	// 1ère ligne : activer / désactiver le Always on Top
+	// 1Ã¨re ligne : activer / dÃ©sactiver le Always on Top
 	wxBoxSizer *b1line1 = new wxBoxSizer (wxHORIZONTAL);
 	label = new wxStaticText (this, -1, _ ("Enable or disable the 'Always on top' style :") );
 	b1line1->Add (label, 0, wxALL | wxALIGN_CENTER_VERTICAL, 5);
@@ -87,11 +87,11 @@ void ActiveWndToolsDialog::CreateControls()
 	p_btnAlwaysOnTop = new wxButton (this, -1, sBtnTxt);
 	b1line1->Add (p_btnAlwaysOnTop, 0, wxALL, 5);
 	box1->Add (b1line1, 0, wxALL | wxEXPAND, 0);
-	// 2ème ligne : la checkbox pour activer ou désactiver la transparence
+	// 2Ã¨me ligne : la checkbox pour activer ou dÃ©sactiver la transparence
 	p_chkEnableTransp = new wxCheckBox (this, -1, _ ("Enable transparency for this window") );
 	box1->Add (p_chkEnableTransp, 0, wxALL | wxEXPAND, 5);
 	p_chkEnableTransp->SetValue (m_bIsTransparent);
-	// 3ème ligne : régler la transparence si elle est activée
+	// 3Ã¨me ligne : rÃ©gler la transparence si elle est activÃ©e
 	wxBoxSizer *b1line3 = new wxBoxSizer (wxHORIZONTAL);
 	p_lblEnableTransp = new wxStaticText (this, -1, _ ("Change opacity :") );
 	p_lblEnableTransp->Enable (m_bIsTransparent);
@@ -181,7 +181,7 @@ void ActiveWndToolsDialog::OnChangeTopMostStyle (wxCommandEvent& event)
 
 	SetWindowPos (m_hActiveWindow, newStyle, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
 	p_btnAlwaysOnTop->SetLabel (sBtnLabel);
-	// Sans la commande ci-dessous, la fenêtre disparait sous la fenêtre active
+	// Sans la commande ci-dessous, la fenÃªtre disparait sous la fenÃªtre active
 	// lorsqu'on lui applique le style "Always on Top"
 	Raise();
 }
@@ -229,13 +229,13 @@ void ActiveWndToolsDialog::OnLeftButtonDown (wxMouseEvent& event)
 
 void ActiveWndToolsDialog::OnMouseMove (wxMouseEvent& event)
 {
-	// Si le bouton gauche de la souris n'est pas pressé, on sort de là
-	// de même si le drag a déjà commencé
+	// Si le bouton gauche de la souris n'est pas pressÃ©, on sort de lÃ 
+	// de mÃªme si le drag a dÃ©jÃ  commencÃ©
 	if ( (!event.LeftIsDown() ) || (m_bIsDragging) ) return;
-	// Si c'est le premier déplacement avec le bouton gauche pressé, on démarre le Drag'n"Drop
+	// Si c'est le premier dÃ©placement avec le bouton gauche pressÃ©, on dÃ©marre le Drag'n"Drop
 	if (!m_bIsDragging)
 	{
-		// On crée le fichier temporaire
+		// On crÃ©e le fichier temporaire
 		m_sTmpFName.SetFullName (wxString::Format (_T ("scr%0ld.png"), time (NULL) ) );
 		m_bmpWindow.SaveFile (m_sTmpFName.GetFullPath(), wxBITMAP_TYPE_PNG);
 		// On initialise le Drag'n'Drop
@@ -244,7 +244,7 @@ void ActiveWndToolsDialog::OnMouseMove (wxMouseEvent& event)
 		wxDropSource source (this);
 		source.SetData (data);
 		wxDragResult res = source.DoDragDrop (wxDrag_DefaultMove);
-		// En fonction du résultat, on supprime ou non le fichier temporaire
+		// En fonction du rÃ©sultat, on supprime ou non le fichier temporaire
 		if ( (res == wxDragMove) || (res == wxDragCancel) || (res == wxDragNone) || (res == wxDragError) )
 			wxRemoveFile (m_sTmpFName.GetFullPath() );
 	}

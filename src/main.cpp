@@ -25,9 +25,9 @@ WinSplitApp::~WinSplitApp()
 bool WinSplitApp::OnInit()
 {
 	setlocale (LC_NUMERIC, "C");
-	// On spécifie "en dur" le nom de l'application
+	// On spÃ©cifie "en dur" le nom de l'application
 	SetAppName (_T ("Winsplit Revolution") );
-	// On vérifie tout de suite si une autre instance ne tourne pas déjà
+	// On vÃ©rifie tout de suite si une autre instance ne tourne pas dÃ©jÃ 
 	if (IsAlreadyRunning() )
 	{
 		wxMessageBox (_ ("Program already running!"), _ ("WinSplit message"), wxOK | wxICON_INFORMATION);
@@ -41,15 +41,15 @@ bool WinSplitApp::OnInit()
 		return false;
 	}
 
-	// Si les options le spécifient, on supprime les éventuels fichiers temporaires
-	// provenant de captures d'écran précédentes
+	// Si les options le spÃ©cifient, on supprime les Ã©ventuels fichiers temporaires
+	// provenant de captures d'Ã©cran prÃ©cÃ©dentes
 	if ( (options.getAutoDeleteTempFiles() ) && (options.getAutoDeleteTime() == 0) )
 		ActiveWndToolsDialog::DeleteTempFiles();
 
 	wxInitAllImageHandlers();
 	wxSocketBase::Initialize();
 
-	// Création de TrayIcon qui va gérer le lancement/management du programme
+	// CrÃ©ation de TrayIcon qui va gÃ©rer le lancement/management du programme
 	p_frameHook = new FrameHook();
 
 	p_frameHook->Show();
@@ -71,14 +71,14 @@ int WinSplitApp::OnExit()
 	delete p_frameHook;
 	delete p_tray;
 
-	// Si les options le spécifient, on supprime les éventuels fichiers temporaires
-	// provenant de captures d'écran précédentes
+	// Si les options le spÃ©cifient, on supprime les Ã©ventuels fichiers temporaires
+	// provenant de captures d'Ã©cran prÃ©cÃ©dentes
 	SettingsManager& options = SettingsManager::Get();
 	if ( (options.getAutoDeleteTempFiles() ) && (options.getAutoDeleteTime() == 1) )
 		ActiveWndToolsDialog::DeleteTempFiles();
-	// On pense à détruire l'instance du SettingsManager
+	// On pense Ã  dÃ©truire l'instance du SettingsManager
 	SettingsManager::Kill();
-	// On détruit également l'instance du wxSingleInstanceChecker
+	// On dÃ©truit Ã©galement l'instance du wxSingleInstanceChecker
 	delete p_checker;
 }
 

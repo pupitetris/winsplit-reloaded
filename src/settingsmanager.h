@@ -15,13 +15,13 @@ class SettingsManager
 public:
 	SettingsManager();
 	virtual ~SettingsManager();
-	// Création / récupération de l'objet unique
+	// CrÃ©ation / rÃ©cupÃ©ration de l'objet unique
 	static SettingsManager& Get();
 	// Destruction de l'objet unique
 	static void Kill();
-	// Vérification de l'intégrité de l'objet
+	// VÃ©rification de l'intÃ©gritÃ© de l'objet
 	bool IsOk();
-	// Obtention du répertoire dans lequel stocker les données
+	// Obtention du rÃ©pertoire dans lequel stocker les donnÃ©es
 	wxString GetDataDirectory();
 	// Obtention du nom d'utilisateur
 	wxString GetUserName();
@@ -30,7 +30,7 @@ public:
 
 	// Accesseurs
 	wxString getAppPath();
-	// Options générales
+	// Options gÃ©nÃ©rales
 	bool AcceptTopMostWindows();
 	void setAcceptTopMostWindows (bool do_it);
 	bool hasToShowHotkeysWarnings();

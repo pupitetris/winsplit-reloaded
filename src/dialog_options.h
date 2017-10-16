@@ -23,7 +23,7 @@ private:
 	VirtualNumpad *p_virtNumpad;
 	AutoPlacementManager m_autoPlacement;
 	wxNotebook *p_nBook;
-	// Contrôles de l'onglet "Général"
+	// ContrÃ´les de l'onglet "GÃ©nÃ©ral"
 	wxComboBox *p_cmbLanguage, *p_cmbAutoPlacement;
 	wxCheckBox *p_checkTmw;
 	wxButton *p_btnDeleteAuto;
@@ -31,16 +31,16 @@ private:
 	wxComboBox *p_cmbDeleteTime;
 	wxButton *p_btnOpenFolder;
 	wxButton *p_btnExportOpt, *p_btnImportOpt;
-	// Contrôles de l'onglet "Virtual numpad"
+	// ContrÃ´les de l'onglet "Virtual numpad"
 	wxCheckBox *p_checkSaveVirtNumpad, *p_checkShowVirtStart, *p_checkAutoHide;
 	wxSlider *p_sliderNumpadTransparency;
-	// Contrôles de l'onglet "Web update"
+	// ContrÃ´les de l'onglet "Web update"
 	wxCheckBox *p_checkUpdate;
 	wxStaticText *p_sttFrequency;
 	wxComboBox *p_cmbUpdate;
 	wxButton *p_btnCheckNow;
 	wxStaticText* p_stcTxtStatus;
-	// Contrôles de l'onglet "Drag'N'Go
+	// ContrÃ´les de l'onglet "Drag'N'Go
 	wxCheckBox *p_checkEnableDnG;
 	wxStaticText *p_sttRadius;
 	wxTextCtrl *p_txtDnGRadius;
@@ -49,7 +49,7 @@ private:
 	wxSlider *p_sliderZoneTransparency;
 	wxComboBox *p_cmbModifier1;
 	wxComboBox *p_cmbModifier2;
-	// Contrôles de l'onglet "Divers"
+	// ContrÃ´les de l'onglet "Divers"
 	wxCheckBox *p_checkEnableXMouse;
 	wxCheckBox *p_checkEnableZOrder;
 	wxStaticText *p_sttZOrderDelay;
@@ -62,16 +62,16 @@ private:
 
 	wxTimer m_timer;
 	ReadVersionThread* p_updateThread;
-	// Méthodes pour la création des différentes pages du wxNotebook
+	// MÃ©thodes pour la crÃ©ation des diffÃ©rentes pages du wxNotebook
 	void CreateAndFillPage_General (wxNotebook *book);
 	void CreateAndFillPage_Numpad (wxNotebook *book);
 	void CreateAndFillPage_WebUpdate (wxNotebook *book);
 	void CreateAndFillPage_DragNGo (wxNotebook *book);
 	void CreateAndFillPage_Misc (wxNotebook *book);
-	// Méthode pour la connexion des contrôles aux méthodes événementielles
+	// MÃ©thode pour la connexion des contrÃ´les aux mÃ©thodes Ã©vÃ©nementielles
 	void CreateEventsConnexions();
 	bool ApplyChanges();
-	// Méthodes événementielles
+	// MÃ©thodes Ã©vÃ©nementielles
 	void OnSomethingHasChanged (wxCommandEvent &event);
 	void OnDeleteAutoPlacementClicked (wxCommandEvent &event);
 	void OnManualUpdatesCheck (wxCommandEvent &event);

@@ -136,7 +136,7 @@ double DistanceCentreToMiddleEdge (DIRECTION sens, wxRect screen, wxRect window)
 	{
 		screen_edge_x = screen.GetLeft();
 	}
-	else //(sens == LEFT_SCREEN) Implémentation future de Up et bas
+	else //(sens == LEFT_SCREEN) ImplÃ©mentation future de Up et bas
 	{
 		screen_edge_x = screen.GetRight();
 	}

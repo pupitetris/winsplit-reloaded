@@ -1,5 +1,5 @@
 #include "settingsmanager.h"
-// Définition de l'objet "singleton"
+// DÃ©finition de l'objet "singleton"
 SettingsManager* SettingsManager::m_instance = NULL;
 
 #include <wx/filename.h>
@@ -29,13 +29,13 @@ const wxLanguage SettingsManager::AvailableLangIds[] =
 const wxString SettingsManager::AvailableLangNames[] =
 {
 	_T ("English"),
-	_T ("Français"),
+	_T ("FranÃ§ais"),
 	_T ("Italiano"),
-	_T ("Español"),
+	_T ("EspaÃ±ol"),
 	_T ("Deutsch"),
-	_T ("Català"),
+	_T ("CatalÃ "),
 	_T ("Dutch"),
-	_T ("Português"),
+	_T ("PortuguÃªs"),
 	_T ("Czech"),
 	_T ("Polish"),
 	_T ("Chinese Traditional"),
@@ -247,7 +247,7 @@ bool SettingsManager::getAutoDeleteTempFiles()
 void SettingsManager::setAutoDeleteTime (int value)
 {
 	// la variable peut avoir les valeurs suivantes :
-	// 0 = suppression des fichiers au démarrage de WinSplit
+	// 0 = suppression des fichiers au dÃ©marrage de WinSplit
 	// 1 = suppression des fichiers lorsque WinSplit se termine
 	m_iAutoDelTime = value;
 }
@@ -554,18 +554,18 @@ bool SettingsManager::getMinMaxCycle()
 
 void SettingsManager::Initialize()
 {
-	// On n'appelle pas deux fois cette méthode
+	// On n'appelle pas deux fois cette mÃ©thode
 	if (m_bInitialized) return;
 
-	// Récupération du nom d'utilisateur
+	// RÃ©cupÃ©ration du nom d'utilisateur
 	m_sUserName = wxGetUserId();
 
 	m_sUserDataDir = wxEmptyString;
 	wxFileName FName (wxGetApp().argv[0]);
 	m_sAppPath = FName.GetPath (wxPATH_GET_VOLUME | wxPATH_GET_SEPARATOR);
-	// On se place dans le répertoire de l'application
+	// On se place dans le rÃ©pertoire de l'application
 	wxSetWorkingDirectory (m_sAppPath);
-	// On regarde d'abord si le fichier de données existe dans le répertoire de l'application.
+	// On regarde d'abord si le fichier de donnÃ©es existe dans le rÃ©pertoire de l'application.
 	FName.SetFullName (_T ("Settings.xml") );
 	// Si c'est le cas, on est en mode "portable"
 	m_bPortableMode = FName.FileExists();
@@ -573,26 +573,26 @@ void SettingsManager::Initialize()
 	{
 		// Sinon, on est en mode "classique"
 		FName.SetPath (wxStandardPaths::Get().GetUserDataDir() );
-		// On s'assure que le répertoire existe, sinon, on le crée
+		// On s'assure que le rÃ©pertoire existe, sinon, on le crÃ©e
 		if (!wxDirExists (FName.GetPath (wxPATH_GET_VOLUME) ) )
 			wxMkdir (FName.GetPath (wxPATH_GET_VOLUME) );
 	}
 	m_sUserDataDir = FName.GetPath (wxPATH_GET_VOLUME | wxPATH_GET_SEPARATOR);
-	// Valeurs par défaut des variables
+	// Valeurs par dÃ©faut des variables
 	// Avertir des erreurs avec les Hotkeys
 	m_bShowHKWarnings = true;
-	// Recherche auto des mises à jour
+	// Recherche auto des mises Ã  jour
 	m_bCheckForUpdates = true;
 	m_iUpdateCheckFrequency = CHECK_UPDATES_ON_START;
-	// Langue par défaut = celle du système
+	// Langue par dÃ©faut = celle du systÃ¨me
 	m_iLanguage = wxLANGUAGE_DEFAULT;
-	// On indique au système ou se trouvent les fichiers de langue
+	// On indique au systÃ¨me ou se trouvent les fichiers de langue
 	wxLocale::AddCatalogLookupPathPrefix (m_sAppPath + _T ("languages") );
-	// On initialise la variable wxLocale avec la langue par défaut du système
+	// On initialise la variable wxLocale avec la langue par dÃ©faut du systÃ¨me
 	if (!m_locale.Init (wxLANGUAGE_DEFAULT, wxLOCALE_CONV_ENCODING) )
 		wxMessageBox (_T ("Unable to set default language !"), _ ("Error"), wxICON_ERROR);;
 	m_locale.AddCatalog (_T ("winsplit") );
-	// On en profite pour vérifier si la langue système correspond à une langue supportée par Winsplit
+	// On en profite pour vÃ©rifier si la langue systÃ¨me correspond Ã  une langue supportÃ©e par Winsplit
 	int iCount = GetAvailableLanguagesCount();
 	for (int i = 0; i < iCount; i++)
 	{
@@ -602,11 +602,11 @@ void SettingsManager::Initialize()
 			break;
 		}
 	}
-	// Pour être certains d'avoir le point dans les nombres à virgule
+	// Pour Ãªtre certains d'avoir le point dans les nombres Ã  virgule
 	setlocale (LC_NUMERIC, "C");
-	// Comportement envers les fichiers temporaires des captures d'écran
+	// Comportement envers les fichiers temporaires des captures d'Ã©cran
 	m_bAutoDelTmpFiles = true; // On supprime automatiquement
-	m_iAutoDelTime = 0; // Suppression au démarrage de WinSplit
+	m_iAutoDelTime = 0; // Suppression au dÃ©marrage de WinSplit
 	// Position, style, comportement et transparence du Virtual Numpad
 	m_iVN_Transparency = 65;
 	m_iVN_PosX = 640;
@@ -615,11 +615,11 @@ void SettingsManager::Initialize()
 	m_bVN_AutoHide = false;
 	m_bVN_ShownAtBoot = false;
 	m_bVN_SavePosOnExit = true;
-	// Ne pas prendre en compte les fenêtre "TopMost"
+	// Ne pas prendre en compte les fenÃªtre "TopMost"
 	m_bAcceptTopmostWindows = false;
 	m_tLastUpdateCheck = time (NULL);
 
-	// Paramètres du Drag'N'Go
+	// ParamÃ¨tres du Drag'N'Go
 	m_bDNG_Enabled = true;
 	m_iDNG_Radius = 100;
 	m_iDNG_timer = 100;
@@ -629,11 +629,11 @@ void SettingsManager::Initialize()
 	m_modDNG1 = 0x02;  //MOD_CONTROL
 	m_modDNG2 = 0x01;  //MOD_ALT
 
-	// Par défaut, activer l'option "La souris suit la fenêtre"
+	// Par dÃ©faut, activer l'option "La souris suit la fenÃªtre"
 	m_bMouseFollowWnd = false;
-	// Par défaut la souris ne suit la fenêtre que si elle est dans sa zone client
+	// Par dÃ©faut la souris ne suit la fenÃªtre que si elle est dans sa zone client
 	m_bMouseFollowOnlyWhenIn = true;
-	// Par défaut, les Hotkeys "Minimize" et "Maximize" gardent leur fonctionnement classique
+	// Par dÃ©faut, les Hotkeys "Minimize" et "Maximize" gardent leur fonctionnement classique
 	m_bMinMaxCycle = false;
 
 	// On essaye de lire les options depuis le fichier xml
@@ -649,8 +649,8 @@ void SettingsManager::LoadSettings()
 	// Si le fichier d'options n'existe pas
 	if (!fname.FileExists() )
 	{
-		// On fait en sorte que Winsplit le crée
-		// Pour cela, on déclare les réglages par défaut comme ayant été modifiés
+		// On fait en sorte que Winsplit le crÃ©e
+		// Pour cela, on dÃ©clare les rÃ©glages par dÃ©faut comme ayant Ã©tÃ© modifiÃ©s
 		m_bIsModified = true;
 		return;
 	}
@@ -663,7 +663,7 @@ void SettingsManager::LoadSettings()
 	if (!doc.IsOk() )
 	{
 		// S'il y a eut une erreur au chargement, on fait en sorte
-		// que les options soient ré-écrites
+		// que les options soient rÃ©-Ã©crites
 		m_bIsModified = true;
 		return;
 	}
