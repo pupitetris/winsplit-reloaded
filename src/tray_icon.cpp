@@ -58,7 +58,7 @@ TrayIcon::TrayIcon() : m_options(SettingsManager::Get())
     if (m_options.getSaveNumpadPosOnExit())
     {
         p_virtNumpad->SetPosition(m_options.getNumpadPosition());
-        p_virtNumpad->SetStyleReduit(m_options.getNumpadStyle());
+        p_virtNumpad->SetStyleReduced(m_options.getNumpadStyle());
         p_virtNumpad->SetCheckValue(!m_options.getNumpadAutoHide());
         p_virtNumpad->SetTransparancy(m_options.getNumpadTransparency());
     }
@@ -151,7 +151,7 @@ void TrayIcon::OnMenuClickRule(wxCommandEvent &event)
     OptionsDialog dialog_option;
     dialog_option.SetVirtualNumPad(p_virtNumpad);
     dialog_option.ShowModal();
-    // Faut-il Ré-activer ou désactiver le hook du Drag'N'Go ?
+    // Do we need to reactivate or deactivate the Drag'N'Go hook?
     if (wxGetApp().GetFrameHook()->IsHookInstalled() != m_options.IsDragNGoEnabled())
     {
         if (m_options.IsDragNGoEnabled())
@@ -203,7 +203,7 @@ void TrayIcon::SaveOnExit()
         if (p_virtNumpad)
         {
             m_options.setNumpadAutoHide(!p_virtNumpad->GetCheckValue());
-            m_options.setNumpadStyle(p_virtNumpad->GetFlag());
+            m_options.setNumpadStyle(p_virtNumpad->IsReduced());
             m_options.setNumpadPosition(p_virtNumpad->GetNotReducedPosition());
         }
     }
@@ -282,23 +282,24 @@ void TrayIcon::SetHotkeys()
     }
 }
 
+// This is a tri-state toggle.
 void TrayIcon::OnLeftClick(wxTaskBarIconEvent &event)
 {
-    if (p_virtNumpad->IsShown())
+    if (!p_virtNumpad->IsShown()) // First state: not shown.
     {
-        if (p_virtNumpad->GetFlag())
-        {
-        	p_virtNumpad->SetStyleReduit(!p_virtNumpad->GetFlag());
-            p_virtNumpad->Show(false);
-            return;
-        }
-        else
-        {
-            p_virtNumpad->SetStyleReduit(!p_virtNumpad->GetFlag());
-        }
+        p_virtNumpad->SetStyleReduced(true);
+        p_virtNumpad->Show();
+        return;
     }
 
-    p_virtNumpad->Show();
+    if (p_virtNumpad->IsReduced()) // Second state: reduced.
+    {
+        p_virtNumpad->SetStyleReduced(false);
+        return;
+    }
+
+    // Remaining third state: reduced.
+    p_virtNumpad->Show(false);
 }
 
 void TrayIcon::OnTimer(wxTimerEvent& event)

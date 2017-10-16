@@ -97,7 +97,7 @@ void VirtualNumpad::SetFlag(bool reduced)
 }
 
 
-bool VirtualNumpad::GetFlag()
+bool VirtualNumpad::IsReduced()
 {
     return m_reducedStyle;
 }
@@ -121,7 +121,7 @@ void VirtualNumpad::SetTransparancy(int value)
     SetTransparent((255*value)/100);
 }
 
-void VirtualNumpad::SetStyleReduit(bool reduce)
+void VirtualNumpad::SetStyleReduced(bool reduce)
 {
     p_checkStay->Show(!reduce);
     long style;

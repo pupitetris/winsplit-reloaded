@@ -42,11 +42,11 @@ public:
     ~VirtualNumpad();
 
     void SetFlag(bool b);
-    bool GetFlag();
+    bool IsReduced();
     void FitFrame();
 
     void SetTransparancy(int val);
-    void SetStyleReduit(bool flag);
+    void SetStyleReduced(bool flag);
     void SetCheckValue(bool b);
     bool GetCheckValue();
     wxPoint GetNotReducedPosition();
