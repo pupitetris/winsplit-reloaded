@@ -283,7 +283,7 @@ void LayoutDialog::CreateControls()
     vsizer_panel->Add(p_stc_height,0,wxALIGN_LEFT|wxALL,10);
 
     wxImage im_schema;
-    im_schema.LoadFile(_T("images\\ecran_winsplit.png"),wxBITMAP_TYPE_PNG);
+    im_schema.LoadFile(_T("..\\images\\ecran_winsplit.png"),wxBITMAP_TYPE_PNG);
 
     hsizer_panel->Add(new wxStaticBitmap(this,wxID_ANY,wxBitmap(im_schema)),0,wxALIGN_CENTRE|wxALL,5);
     hsizer_panel->AddSpacer(10);

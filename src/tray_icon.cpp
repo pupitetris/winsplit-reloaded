@@ -80,21 +80,21 @@ TrayIcon::~TrayIcon()
 
 void TrayIcon::LoadImages()
 {
-    im_about.LoadFile(_T("images\\about.png"),wxBITMAP_TYPE_PNG);
+    im_about.LoadFile(_T("..\\images\\about.png"),wxBITMAP_TYPE_PNG);
 
-    im_help.LoadFile(_T("images\\help.png"),wxBITMAP_TYPE_PNG);
+    im_help.LoadFile(_T("..\\images\\help.png"),wxBITMAP_TYPE_PNG);
 
-    im_options.LoadFile(_T("images\\options.png"),wxBITMAP_TYPE_PNG);
+    im_options.LoadFile(_T("..\\images\\options.png"),wxBITMAP_TYPE_PNG);
 
-    im_layout_settings.LoadFile(_T("images\\layout.png"),wxBITMAP_TYPE_PNG);
+    im_layout_settings.LoadFile(_T("..\\images\\layout.png"),wxBITMAP_TYPE_PNG);
 
-    im_hotkeys.LoadFile(_T("images\\hotkeys.png"),wxBITMAP_TYPE_PNG);
+    im_hotkeys.LoadFile(_T("..\\images\\hotkeys.png"),wxBITMAP_TYPE_PNG);
 
-    im_startwin_false.LoadFile(_T("images\\auto_start_false.png"),wxBITMAP_TYPE_PNG);
+    im_startwin_false.LoadFile(_T("..\\images\\auto_start_false.png"),wxBITMAP_TYPE_PNG);
 
-    im_startwin_true.LoadFile(_T("images\\auto_start_true.png"),wxBITMAP_TYPE_PNG);
+    im_startwin_true.LoadFile(_T("..\\images\\auto_start_true.png"),wxBITMAP_TYPE_PNG);
 
-    im_exit.LoadFile(_T("images\\exit.png"),wxBITMAP_TYPE_PNG);
+    im_exit.LoadFile(_T("..\\images\\exit.png"),wxBITMAP_TYPE_PNG);
 }
 
 wxMenu* TrayIcon::CreatePopupMenu()
