@@ -55,7 +55,7 @@ void AboutDialog::CreateControls()
 	*ptxtAbout << _T("Copyright (C) 2005-2009") << _T("\n");
     *ptxtAbout << _("Created by Raphael Lencrerot") << _T("\n\n");
 
-    *ptxtAbout << _T("Official website http://winsplit-revolution.com") << _T("\n\n");
+    *ptxtAbout << _T("Reloaded fork website https://github.com/pupitetris/winsplit-reloaded") << _T("\n\n");
 	*ptxtAbout << _("C++ based software developed thanks to the following:") << _T("\n");
 	*ptxtAbout << _("wxWidgets GUI Library and Code::Blocks (C++ IDE).") << _T("\n\n");
 
@@ -112,7 +112,7 @@ void AboutDialog::OnImagewxClick(wxCommandEvent& event)
 
 void AboutDialog::OnImageccClick(wxCommandEvent& event)
 {
-   wxLaunchDefaultBrowser(_T("http://www.gnu.org/licenses"));
+   wxLaunchDefaultBrowser(_T("http://www.gnu.org/licenses/gpl.html"));
 }
 
 
@@ -121,6 +121,6 @@ void AboutDialog::OnURLClick(wxTextUrlEvent& event)
     wxMouseEvent mouse_event = event.GetMouseEvent();
 
     if (mouse_event.Button(wxMOUSE_BTN_LEFT))
-        wxLaunchDefaultBrowser(_T("http://winsplit-revolution.com"));
+        wxLaunchDefaultBrowser(_T("https://github.com/pupitetris/winsplit-reloaded"));
 
 }

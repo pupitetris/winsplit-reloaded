@@ -643,8 +643,8 @@ void OptionsDialog::OnTimer(wxTimerEvent& event)
             {
                 wxString message;
                 message << _("You have the latest version of WinSplit Revoluton. "
-                            "Always feel free to check out the website fore more informations");
-                message << _T("\nhttp://winsplit-revolution.com");
+                            "Always feel free to check out the Reloaded fork website fore more information");
+                message << _T("\nhttps://github.com/pupitetris/winsplit-reloaded");
                 wxMessageBox(message,_T("WinSplit Revolution"),wxOK,this);
 
             }
