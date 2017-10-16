@@ -1,6 +1,9 @@
-
+// For Vista and newer "extended" frame compensation:
+#include "Dwmapi-compat.h"
 
 #include "layout_manager.h"
+
+#include <wx/utils.h>
 
 using namespace std;
 
@@ -189,7 +192,15 @@ wxRect LayoutManager::GetNext(HWND hwnd,int sequence)
     GetMonitorInfo(hmonitor,&monitor_info);
 
     screen_rect = monitor_info.rcWork;
-    GetWindowRect(hwnd,&wnd);
+
+    {
+        int major;
+        wxGetOsVersion (&major, NULL);
+        if (major < 6) // Older than Windows Vista.
+            GetWindowRect(hwnd,&wnd);
+        else
+            DwmGetWindowAttribute(hwnd, DWMWA_EXTENDED_FRAME_BOUNDS, &wnd, sizeof(RECT));
+    }
 
     vector<RatioRect>::iterator it;
 
@@ -203,7 +214,7 @@ wxRect LayoutManager::GetNext(HWND hwnd,int sequence)
         wnd_tmp.right = wnd_tmp.left + int(round((*it).width*0.01*(screen_rect.right-screen_rect.left)));
         wnd_tmp.bottom = wnd_tmp.top + int(round((*it).height*0.01*(screen_rect.bottom-screen_rect.top)));
 
-        ++it; // on pointe sur le suivant
+        ++it; // point to the next one
         if ( (wnd_tmp.left == wnd.left) && (wnd_tmp.right == wnd.right) && (wnd_tmp.bottom == wnd.bottom) && (wnd_tmp.top == wnd.top))
             break;
     }
