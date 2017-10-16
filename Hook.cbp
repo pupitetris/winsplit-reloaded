@@ -6,41 +6,9 @@
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
-			<Target title="Release_Xav">
-				<Option output="bin/winsplithook.dll" prefix_auto="0" extension_auto="0" />
-				<Option object_output="hook_src/obj/" />
-				<Option type="3" />
-				<Option compiler="gcc" />
-				<Option host_application="bin/WinSplit.exe" />
-				<Option run_host_application_in_terminal="0" />
-				<Option createStaticLib="1" />
-				<Compiler>
-					<Add option="-O2" />
-					<Add option="-Wall" />
-				</Compiler>
-				<Linker>
-					<Add option="-s" />
-				</Linker>
-			</Target>
-			<Target title="Release_Raph">
-				<Option output="bin/winsplithook.dll" prefix_auto="0" extension_auto="0" />
-				<Option object_output="hook_src/obj/" />
-				<Option type="3" />
-				<Option compiler="mingw_compiler_43" />
-				<Option host_application="bin/WinSplit.exe" />
-				<Option run_host_application_in_terminal="0" />
-				<Option createStaticLib="1" />
-				<Compiler>
-					<Add option="-O2" />
-					<Add option="-Wall" />
-				</Compiler>
-				<Linker>
-					<Add option="-s" />
-				</Linker>
-			</Target>
 			<Target title="Release_GCC">
-				<Option output="bin/winsplithook.dll" prefix_auto="0" extension_auto="0" />
-				<Option object_output="hook_src/obj/" />
+				<Option output="bin/release/winsplithook.dll" prefix_auto="0" extension_auto="0" />
+				<Option object_output="hook_src/release/obj/" />
 				<Option type="3" />
 				<Option compiler="gcc" />
 				<Option host_application="bin/WinSplit.exe" />
@@ -53,6 +21,19 @@
 				<Linker>
 					<Add option="-s" />
 				</Linker>
+			</Target>
+			<Target title="Debug_GCC">
+				<Option output="bin/debug/winsplithook.dll" prefix_auto="0" extension_auto="0" />
+				<Option object_output="hook_src/debug/obj/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option host_application="bin/WinSplit.exe" />
+				<Option run_host_application_in_terminal="0" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+				</Compiler>
 			</Target>
 		</Build>
 		<Compiler>

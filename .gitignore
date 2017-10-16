@@ -1,11 +1,9 @@
-/bin/winsplithook.dll
-/bin/winsplithook
-/hook_src/obj/hook_src/*.o
-/hook_src/obj/hook_src/ressource.res
 /*.depend
 /*.layout
-/bin/*.exe
-/src/obj/src/*.o
-/src/obj/src/ressource.res
-/src/wx_include.h.gch/Release_GCC_src_wx_include_h_gch
 /*.cscope_file_list
+/bin/debug
+/bin/release
+/hook_src/debug/obj/hook_src
+/hook_src/release/obj/hook_src
+/src/debug/src
+/src/release/src
