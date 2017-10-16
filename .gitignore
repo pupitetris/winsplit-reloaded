@@ -8,3 +8,4 @@
 /src/obj/src/*.o
 /src/obj/src/ressource.res
 /src/wx_include.h.gch/Release_GCC_src_wx_include_h_gch
+/*.cscope_file_list
