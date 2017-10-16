@@ -35,12 +35,16 @@ LMPreview::LMPreview(wxWindow* parent) : wxPanel(parent,-1)
 
     mdc.SelectObject(wxNullBitmap);
 
-    // Chargement de l'image correspondant au fond d'écran
-    wxRegKey rKey(_T("HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Desktop\\General"));
+    // Load of the wallpaper image
     wxString sScrBg;
-    rKey.QueryValue(_T("Wallpaper"),sScrBg);
-    wxBitmap scrBmp;
+    wxRegKey rKey (_T("HKEY_CURRENT_USER\\Control Panel\\Desktop"));
+    if (!rKey.QueryValue (_T("WallPaper"), sScrBg)) {
+		rKey.SetName (_T("HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Internet Explorer\\Desktop\\General"));
+		if (!rKey.QueryValue(_T("WallpaperSource"),sScrBg))
+			rKey.QueryValue(_T("Wallpaper"),sScrBg);
+    }
 
+    wxBitmap scrBmp;
     wxImage bgImg;
 
     bool bFileExist = wxFileName::FileExists(sScrBg);
