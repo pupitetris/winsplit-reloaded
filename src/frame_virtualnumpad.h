@@ -1,4 +1,3 @@
-// Fichier frame_popup.h
 #ifndef __POPUPTRAY_H__
 #define __POPUPTRAY_H__
 

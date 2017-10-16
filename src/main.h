@@ -1,4 +1,4 @@
-// Fichier main_application.h
+// main_application.h file
 #ifndef __WINSPLITMAIN__
 #define __WINSPLITMAIN__
 
