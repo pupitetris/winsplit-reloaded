@@ -446,7 +446,14 @@ void SettingsManager::setDnGMod2 (const unsigned int& mod)
 
 void SettingsManager::setXMouseActivation (bool enable)
 {
-	wxRegKey rKey (_T ("HKEY_CURRENT_USER\\Control Panel\\Desktop") );
+	long lVal = (enable)? 1: 0;
+	wxRegKey rKey (_T ("HKEY_CURRENT_USER\\Control Panel\\Mouse") );
+	if (rKey.HasValue (_T ("ActiveWindowTracking"))) {
+		rKey.SetValue (_T ("ActiveWindowTracking"), lVal);
+		return;
+	}
+
+	rKey.SetName (_T ("HKEY_CURRENT_USER\\Control Panel\\Desktop") );
 	wxMemoryBuffer mBuff;
 	rKey.QueryValue (_T ("UserPreferencesMask"), mBuff);
 	unsigned char c = * (unsigned char*) (mBuff.GetData() );
@@ -460,8 +467,14 @@ void SettingsManager::setXMouseActivation (bool enable)
 
 bool SettingsManager::IsXMouseActivated()
 {
-	wxRegKey rKey (_T ("HKEY_CURRENT_USER\\Control Panel\\Desktop") );
 	wxMemoryBuffer mBuff;
+	long lVal;
+
+	wxRegKey rKey (_T ("HKEY_CURRENT_USER\\Control Panel\\Mouse") );
+	if (rKey.QueryValue (_T ("ActiveWindowTracking"), &lVal))
+		return (lVal)? true: false;
+
+	rKey.SetName (_T ("HKEY_CURRENT_USER\\Control Panel\\Desktop") );
 	rKey.QueryValue (_T ("UserPreferencesMask"), mBuff);
 	char c = * (char*) (mBuff.GetData() );
 	return ( (c & 1) == 1);
