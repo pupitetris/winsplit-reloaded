@@ -313,11 +313,11 @@ void OptionsDialog::CreateAndFillPage_Misc (wxNotebook *book)
 
 	wxPanel *pnlMisc = new wxPanel (p_nBook);
 	pageszr = new wxBoxSizer (wxVERTICAL);
-	// Première zone : la fonction "auto-focus" de Windows
-	stbszr = new wxStaticBoxSizer (wxVERTICAL, pnlMisc, _ ("Windows 'Active Window Tracking' built-in functionnality :") );
+	// First zone: Windows auto-focus function
+	stbszr = new wxStaticBoxSizer (wxVERTICAL, pnlMisc, _ ("Windows 'Active Window Tracking' built-in functionality :") );
 	label = new wxStaticText (pnlMisc, -1, _ ("Any modification here needs at least a session restart to take effect.") );
 	stbszr->Add (label, 0, wxALL | wxEXPAND, 5);
-	p_checkEnableXMouse = new wxCheckBox (pnlMisc, wxID_ANY, _ ("Enable the Windows 'Active Window Tracking' built-in functionnality.") );
+	p_checkEnableXMouse = new wxCheckBox (pnlMisc, wxID_ANY, _ ("Enable the Windows 'Active Window Tracking' built-in functionality.") );
 	p_checkEnableXMouse->SetValue (m_options.IsXMouseActivated() );
 	stbszr->Add (p_checkEnableXMouse, 0, wxLEFT | wxRIGHT | wxBOTTOM | wxEXPAND, 5);
 	lnszr = new wxBoxSizer (wxHORIZONTAL);
