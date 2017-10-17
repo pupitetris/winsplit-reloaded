@@ -14,6 +14,7 @@
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-O3" />
+					<Add option="-Wfatal-errors" />
 					<Add option="-DwxUSE_UNICODE" />
 					<Add directory="$(WX_DIR)/include" />
 					<Add directory="$(WX_DIR)/lib/gcc_lib/msw$(WXUNICODEFLAG)$(WXDEBUGFLAG)" />
@@ -47,6 +48,7 @@
 				<Option compiler="gcc" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
+					<Add option="-Wfatal-errors" />
 					<Add option="-g" />
 					<Add option="-DwxUSE_UNICODE" />
 					<Add directory="$(WX_DIR)/include" />
@@ -168,6 +170,7 @@
 			<code_completion />
 			<envvars />
 			<debugger />
+			<editor_config active="1" use_tabs="1" tab_indents="1" tab_width="4" indent="4" eol_mode="0" />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
