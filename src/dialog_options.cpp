@@ -52,7 +52,7 @@ OptionsDialog::OptionsDialog (wxWindow *parent) : wxDialog (parent, -1, _ ("Opti
 	SetSizer (mainsizer);
 	mainsizer->SetSizeHints (this);
 
-	CreateEventsConnexions();
+	CreateEventConnections();
 }
 
 OptionsDialog::~OptionsDialog()
@@ -154,13 +154,15 @@ void OptionsDialog::CreateAndFillPage_General (wxNotebook *book)
 
 void OptionsDialog::CreateAndFillPage_Numpad (wxNotebook *book)
 {
-	// Sizer général de la page
+	// General sizer for the page
 	wxBoxSizer *pageszr;
-	// Variable pour les différents wxStaticBoxSizer
+
+	// Variable for the various wxStaticBoxSizers
 	wxStaticBoxSizer *stbszr;
 
 	wxPanel *pnlNumpad = new wxPanel (p_nBook, -1);
 	pageszr = new wxBoxSizer (wxVERTICAL);
+
 	// First zone: options
 	stbszr = new wxStaticBoxSizer (wxVERTICAL, pnlNumpad, _ ("Virtual numpad options") );
 	p_checkSaveVirtNumpad = new wxCheckBox (pnlNumpad, -1, _ ("Save Virtual numpad state when exit") );
@@ -173,6 +175,7 @@ void OptionsDialog::CreateAndFillPage_Numpad (wxNotebook *book)
 	p_checkAutoHide->SetValue (m_options.getNumpadAutoHide() );
 	stbszr->Add (p_checkAutoHide, 0, wxALL | wxEXPAND, 5);
 	pageszr->Add (stbszr, 0, wxALL | wxEXPAND, 5);
+
 	// Second zone: styling (transparency)
 	stbszr = new wxStaticBoxSizer (wxVERTICAL, pnlNumpad, _ ("Virtual numpad style") );
 	stbszr->Add (new wxStaticText (pnlNumpad, -1, _ ("Adjust Virtual numpad transparency") ), 0, wxALL | wxALIGN_CENTER_HORIZONTAL, 5);
@@ -181,6 +184,20 @@ void OptionsDialog::CreateAndFillPage_Numpad (wxNotebook *book)
 	p_sliderNumpadTransparency->SetValue (m_options.getNumpadTransparency() );
 	stbszr->Add (p_sliderNumpadTransparency, 0, wxALL | wxEXPAND, 5);
 	pageszr->Add (stbszr, 0, wxALL | wxEXPAND, 5);
+
+	// Third zone: position
+	stbszr = new wxStaticBoxSizer (wxVERTICAL, pnlNumpad, _ ("Virtual numpad position") );
+	{
+		wxBoxSizer *horSizer = new wxBoxSizer (wxHORIZONTAL);
+		wxStaticText *stt = new wxStaticText (pnlNumpad, -1,
+											_ ("Sometimes, the virtual numpad ends up outside of the screen.\nYou can restore its position to the center of the screen."));
+		horSizer->Add (stt, 0, wxALL | wxALIGN_CENTER_VERTICAL, 5);
+		p_btnNumpadRestorePosition = new wxButton (pnlNumpad, -1, _ ("Center numpad on screen") );
+		horSizer->Add (p_btnNumpadRestorePosition, wxALL | wxEXPAND, 5);
+		stbszr->Add (horSizer, 0, wxALL | wxEXPAND, 5);
+	}
+	pageszr->Add (stbszr, 0, wxALL | wxEXPAND, 5);
+
 	pnlNumpad->SetSizer (pageszr);
 	p_nBook->AddPage (pnlNumpad, _ ("Virtual numpad") );
 }
@@ -197,11 +214,11 @@ void OptionsDialog::CreateAndFillPage_WebUpdate (wxNotebook *book)
 	pageszr = new wxBoxSizer (wxVERTICAL);
 	// Première zone : les mises à jour automatiques
 	stbszr = new wxStaticBoxSizer (wxVERTICAL, pnlUpdates, _ ("Checking for update") );
-	p_checkUpdate = new wxCheckBox (pnlUpdates, -1, _ ("Check website for Winsplit updates") );
+	p_checkUpdate = new wxCheckBox (pnlUpdates, -1, _ ("Check website for WinSplit updates") );
 	p_checkUpdate->SetValue (m_options.hasToCheckForUpdates() );
 	stbszr->Add (p_checkUpdate, 0, wxALL | wxEXPAND, 5);
 	hszr = new wxBoxSizer (wxHORIZONTAL);
-	p_sttFrequency = new wxStaticText (pnlUpdates, -1, _ ("Web updates check frequency :") );
+	p_sttFrequency = new wxStaticText (pnlUpdates, -1, _ ("Web update check frequency:") );
 	p_sttFrequency->Enable (m_options.hasToCheckForUpdates() );
 	hszr->Add (p_sttFrequency, 0, wxALL | wxALIGN_CENTER_VERTICAL);
 	p_cmbUpdate = new wxComboBox (pnlUpdates, -1, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, NULL, wxCB_READONLY);
@@ -353,9 +370,9 @@ void OptionsDialog::CreateAndFillPage_Misc (wxNotebook *book)
 	pnlMisc->SetSizer (pageszr);
 	p_nBook->AddPage (pnlMisc, _ ("Misc") );
 }
-void OptionsDialog::CreateEventsConnexions()
+void OptionsDialog::CreateEventConnections()
 {
-	// Page "Général"
+	// General page
 	p_cmbLanguage->Connect (wxEVT_COMMAND_COMBOBOX_SELECTED, wxCommandEventHandler (OptionsDialog::OnSomethingHasChanged), NULL, this);
 	p_checkTmw->Connect (wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler (OptionsDialog::OnSomethingHasChanged), NULL, this);
 	p_btnDeleteAuto->Connect (wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler (OptionsDialog::OnDeleteAutoPlacementClicked), NULL, this);
@@ -364,16 +381,20 @@ void OptionsDialog::CreateEventsConnexions()
 	p_btnOpenFolder->Connect (wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler (OptionsDialog::OnOpenScreenshotsFolder), NULL, this);
 	p_btnExportOpt->Connect (wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler (OptionsDialog::OnExportSettings), NULL, this);
 	p_btnImportOpt->Connect (wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler (OptionsDialog::OnImportSettings), NULL, this);
-	// Page "Virtual Numpad"
+
+	// Virtual numpad page
 	p_checkSaveVirtNumpad->Connect (wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler (OptionsDialog::OnSomethingHasChanged), NULL, this);
 	p_checkShowVirtStart->Connect (wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler (OptionsDialog::OnSomethingHasChanged), NULL, this);
 	p_checkAutoHide->Connect (wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler (OptionsDialog::OnSomethingHasChanged), NULL, this);
 	p_sliderNumpadTransparency->Connect (wxEVT_SCROLL_CHANGED, wxCommandEventHandler (OptionsDialog::OnSomethingHasChanged), NULL, this);
-	// Page "Web updates"
+	p_btnNumpadRestorePosition->Connect (wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler (OptionsDialog::OnNumpadRestoreClicked), NULL, this);
+
+	// Web update page
 	p_checkUpdate->Connect (wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler (OptionsDialog::OnSomethingHasChanged), NULL, this);
 	p_cmbUpdate->Connect (wxEVT_COMMAND_COMBOBOX_SELECTED, wxCommandEventHandler (OptionsDialog::OnSomethingHasChanged), NULL, this);
 	p_btnCheckNow->Connect (wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler (OptionsDialog::OnManualUpdatesCheck), NULL, this);
-	// Page "Drag'N'Go
+
+	// Drag'N'Go page
 	p_checkEnableDnG->Connect (wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler (OptionsDialog::OnSomethingHasChanged), NULL, this);
 	p_txtDnGRadius->Connect (wxEVT_COMMAND_TEXT_UPDATED, wxCommandEventHandler (OptionsDialog::OnSomethingHasChanged), NULL, this);
 	p_pnlZoneBgColor->Connect (wxEVT_LEFT_UP, wxMouseEventHandler (OptionsDialog::OnSelectPanelColor), NULL, this);
@@ -381,14 +402,16 @@ void OptionsDialog::CreateEventsConnexions()
 	p_sliderZoneTransparency->Connect (wxEVT_SCROLL_CHANGED, wxCommandEventHandler (OptionsDialog::OnSomethingHasChanged), NULL, this);
 	p_cmbModifier1->Connect (wxEVT_COMMAND_COMBOBOX_SELECTED, wxCommandEventHandler (OptionsDialog::OnSomethingHasChanged), NULL, this);
 	p_cmbModifier2->Connect (wxEVT_COMMAND_COMBOBOX_SELECTED, wxCommandEventHandler (OptionsDialog::OnSomethingHasChanged), NULL, this);
-	// Page "Divers"
+
+	// Misc page
 	p_checkEnableXMouse->Connect (wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler (OptionsDialog::OnSomethingHasChanged), NULL, this);
 	p_checkEnableZOrder->Connect (wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler (OptionsDialog::OnSomethingHasChanged), NULL, this);
 	p_txtZOrderDelay->Connect (wxEVT_COMMAND_TEXT_UPDATED, wxCommandEventHandler (OptionsDialog::OnSomethingHasChanged), NULL, this);
 	p_checkFollowWnd->Connect (wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler (OptionsDialog::OnSomethingHasChanged), NULL, this);
 	p_checkFollowOnlyIn->Connect (wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler (OptionsDialog::OnSomethingHasChanged), NULL, this);
 	p_checkMinMaxCycle->Connect (wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler (OptionsDialog::OnSomethingHasChanged), NULL, this);
-	// Boutons "Ok" et "Appliquer"
+
+	// OK and Apply buttons
 	p_btnApply->Connect (wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler (OptionsDialog::OnApplyOrOkClicked), NULL, this);
 	p_btnOk->Connect (wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler (OptionsDialog::OnApplyOrOkClicked), NULL, this);
 
@@ -416,6 +439,11 @@ void OptionsDialog::OnDeleteAutoPlacementClicked (wxCommandEvent &event)
 		}
 		p_cmbAutoPlacement->Select (0);
 	}
+}
+
+void OptionsDialog::OnNumpadRestoreClicked (wxCommandEvent &event)
+{
+	p_virtNumpad->CenterOnScreen ();
 }
 
 void OptionsDialog::OnManualUpdatesCheck (wxCommandEvent &event)

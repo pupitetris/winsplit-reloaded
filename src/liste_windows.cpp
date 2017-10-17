@@ -35,13 +35,13 @@ bool CALLBACK EnumWindowsProc (HWND hwnd, LPARAM lParam)
 HWND ListWindows::ListWindow()
 {
 	SettingsManager &options = SettingsManager::Get();
-	HWND hwnd_fenetre;
+	HWND hwnd_window;
 
-	hwnd_fenetre = GetForegroundWindow();
+	hwnd_window = GetForegroundWindow();
 
-	if (ValidateWindow (hwnd_fenetre, options.AcceptTopMostWindows() ) )
-		return hwnd_fenetre;
+	if (ValidateWindow (hwnd_window, options.AcceptTopMostWindows() ) )
+		return hwnd_window;
 
-	EnumWindows ( (WNDENUMPROC) EnumWindowsProc, (LPARAM) &hwnd_fenetre);
-	return hwnd_fenetre;
+	EnumWindows ( (WNDENUMPROC) EnumWindowsProc, (LPARAM) &hwnd_window);
+	return hwnd_window;
 }

@@ -23,7 +23,8 @@ private:
 	VirtualNumpad *p_virtNumpad;
 	AutoPlacementManager m_autoPlacement;
 	wxNotebook *p_nBook;
-	// Contrôles de l'onglet "Général"
+
+	// Controls for the General tab
 	wxComboBox *p_cmbLanguage, *p_cmbAutoPlacement;
 	wxCheckBox *p_checkTmw;
 	wxButton *p_btnDeleteAuto;
@@ -31,16 +32,20 @@ private:
 	wxComboBox *p_cmbDeleteTime;
 	wxButton *p_btnOpenFolder;
 	wxButton *p_btnExportOpt, *p_btnImportOpt;
-	// Contrôles de l'onglet "Virtual numpad"
+
+	// Controls for the Virtual numpad tab
 	wxCheckBox *p_checkSaveVirtNumpad, *p_checkShowVirtStart, *p_checkAutoHide;
 	wxSlider *p_sliderNumpadTransparency;
-	// Contrôles de l'onglet "Web update"
+	wxButton *p_btnNumpadRestorePosition;
+
+	// Controls for the Web update tab
 	wxCheckBox *p_checkUpdate;
 	wxStaticText *p_sttFrequency;
 	wxComboBox *p_cmbUpdate;
 	wxButton *p_btnCheckNow;
 	wxStaticText* p_stcTxtStatus;
-	// Contrôles de l'onglet "Drag'N'Go
+
+	// Controls for the Drag'N'Go tab
 	wxCheckBox *p_checkEnableDnG;
 	wxStaticText *p_sttRadius;
 	wxTextCtrl *p_txtDnGRadius;
@@ -49,7 +54,8 @@ private:
 	wxSlider *p_sliderZoneTransparency;
 	wxComboBox *p_cmbModifier1;
 	wxComboBox *p_cmbModifier2;
-	// Contrôles de l'onglet "Divers"
+
+	// Controls for the Misc tab
 	wxCheckBox *p_checkEnableXMouse;
 	wxCheckBox *p_checkEnableZOrder;
 	wxStaticText *p_sttZOrderDelay;
@@ -57,21 +63,25 @@ private:
 	wxCheckBox *p_checkFollowWnd;
 	wxCheckBox *p_checkFollowOnlyIn;
 	wxCheckBox *p_checkMinMaxCycle;
-	// Boutons de commandes du dialogue
+
+	// Action buttons for the dialog
 	wxButton *p_btnOk, *p_btnCancel, *p_btnApply;
 
 	wxTimer m_timer;
 	ReadVersionThread* p_updateThread;
-	// Méthodes pour la création des différentes pages du wxNotebook
+
+	// Methods for the creation of the different pages of the wxNotebook
 	void CreateAndFillPage_General (wxNotebook *book);
 	void CreateAndFillPage_Numpad (wxNotebook *book);
 	void CreateAndFillPage_WebUpdate (wxNotebook *book);
 	void CreateAndFillPage_DragNGo (wxNotebook *book);
 	void CreateAndFillPage_Misc (wxNotebook *book);
-	// Méthode pour la connexion des contrôles aux méthodes événementielles
-	void CreateEventsConnexions();
+
+	// Method for the connection of controls to event methods
+	void CreateEventConnections();
 	bool ApplyChanges();
-	// Méthodes événementielles
+
+	// Event methods
 	void OnSomethingHasChanged (wxCommandEvent &event);
 	void OnDeleteAutoPlacementClicked (wxCommandEvent &event);
 	void OnManualUpdatesCheck (wxCommandEvent &event);
@@ -82,6 +92,7 @@ private:
 	void OnExportSettings (wxCommandEvent &event);
 	void OnImportSettings (wxCommandEvent &event);
 	void OnResetSettings (wxCommandEvent &event);
+	void OnNumpadRestoreClicked (wxCommandEvent &event);
 };
 
 #endif // OPTIONSDIALOG_H_INCLUDED

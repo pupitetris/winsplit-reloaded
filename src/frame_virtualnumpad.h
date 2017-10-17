@@ -47,6 +47,8 @@ public:
 	bool IsReduced();
 	void CycleShownReduced ();
 
+	void CenterOnScreen ();
+
 	void SetTransparency (int val);
 	void SetCheckValue (bool b);
 	bool GetCheckValue();

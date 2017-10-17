@@ -169,6 +169,45 @@ void VirtualNumpad::CycleShownReduced()
 	Show (false);
 }
 
+void VirtualNumpad::CenterOnScreen ()
+{
+	bool is_reduced = IsReduced();
+	SetReduced(false);
+
+	HMONITOR hmonitor;
+	MONITORINFO monitor_info;
+
+	HWND hwnd = (HWND) GetHandle ();
+
+	hmonitor = MonitorFromWindow (hwnd, MONITOR_DEFAULTTONEAREST);
+	monitor_info.cbSize = sizeof (MONITORINFO);
+	GetMonitorInfo (hmonitor, &monitor_info);
+
+	RECT screen_rect = monitor_info.rcWork;
+	LONG scr_width = screen_rect.right - screen_rect.left;
+	LONG scr_height = screen_rect.bottom - screen_rect.top;
+
+	RECT wnd;
+	GetWindowRect (hwnd, &wnd);
+
+	LONG width = wnd.right - wnd.left;
+	LONG height = wnd.bottom - wnd.top;
+
+	RECT new_geom;
+	new_geom.left = screen_rect.left + (scr_width - width) / 2;
+	new_geom.top = screen_rect.top + (scr_height - height) / 2;
+
+	new_geom.right = new_geom.left + width / 2;
+	new_geom.bottom = new_geom.top + height / 2;
+
+	SetWindowPos (hwnd, HWND_TOP, new_geom.left, new_geom.top, width, height, SWP_NOSIZE);
+
+	m_frame_pos = GetPosition();
+
+	if (is_reduced)
+		SetReduced(true);
+}
+
 void VirtualNumpad::SetCheckValue (bool checked)
 {
 	p_checkStay->SetValue (checked);

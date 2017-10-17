@@ -37,18 +37,18 @@ WindowInfos AutoPlacementManager::GetWindowInfos (const wxString& name)
 void AutoPlacementManager::AddWindow (const HWND& hwnd, const wxString& name)
 {
 	WindowInfos structinfo;
-	RECT cadre;
+	RECT rect;
 
 	structinfo.m_strName = name;
 
 	structinfo.m_flagResize = (GetWindowLong (hwnd, GWL_STYLE) &WS_SIZEBOX) == 0 ? 0 : 1;
 	structinfo.m_wndStyle = GetWindowLong (hwnd, GWL_STYLE);
 
-	GetWindowRect (hwnd, &cadre);
-	structinfo.m_rectxy.x = cadre.left;
-	structinfo.m_rectxy.y = cadre.top;
-	structinfo.m_rectxy.width = cadre.right - cadre.left;
-	structinfo.m_rectxy.height = cadre.bottom - cadre.top;
+	GetWindowRect (hwnd, &rect);
+	structinfo.m_rectxy.x = rect.left;
+	structinfo.m_rectxy.y = rect.top;
+	structinfo.m_rectxy.width = rect.right - rect.left;
+	structinfo.m_rectxy.height = rect.bottom - rect.top;
 
 	m_vecWnd.push_back (structinfo);
 }
